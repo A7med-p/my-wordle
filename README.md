@@ -1,6 +1,8 @@
 # Creating a wordle game
 ![some alt text](./image/mywardle.png)
 
+wordle is a famous game that every one have played or heard of, the game helps improve vocabulary and problem solving witch makes it fun.
+
 ## First step:
 To creat a wordle game, we need to build the front page where the user can inter an the word to see if it was correct or not.
 
