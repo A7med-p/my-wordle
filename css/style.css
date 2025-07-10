@@ -1,3 +1,8 @@
+.board {
+  width: 300px;
+  margin: 10px auto;
+}
+
 .sqrup {
   width: 50px;
   height: 50px;
@@ -9,5 +14,48 @@
   vertical-align: top; 
   background-color: white;
   margin: 1px 0;
+  border-radius: 10px;
+}
+.sqrdown {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 30px; 
+  text-align: center;
+  background-color:lightgray;
+  margin: 2px 0;
+  border-radius: 10px;
+}
+
+.board {
+  width: 300px;
+  margin: 10px auto;
+}
+
+.letters1{
+  width: 650px;
+  margin: 5px auto;
+}
+
+.letters2{
+  width: 650px;
+  margin: 5px auto;
+}
+
+.letters3{
+  width: 650px;
+  margin: 5px auto;
+}
+
+.ent-back{
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 30px; 
+  text-align: center;
+  background-color: lightgray;
+  margin: 2px 0;
   border-radius: 10px;
 }
