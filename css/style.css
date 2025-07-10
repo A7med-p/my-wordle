@@ -1,6 +1,9 @@
-.board {
-  width: 300px;
-  margin: 10px auto;
+body {
+  background-color: wheat;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  margin: 0;
+  /* padding-top: 2px; */
 }
 
 .sqrup {
@@ -15,7 +18,9 @@
   background-color: white;
   margin: 1px 0;
   border-radius: 10px;
+  line-height: 1.5;
 }
+
 .sqrdown {
   width: 50px;
   height: 50px;
@@ -28,14 +33,15 @@
   border-radius: 10px;
 }
 
-.board {
+.board1, .board2, .board3, .board4, .board5, .board6 {
   width: 300px;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 .letters1{
   width: 650px;
   margin: 5px auto;
+  
 }
 
 .letters2{
@@ -48,7 +54,8 @@
   margin: 5px auto;
 }
 
-.ent-back{
+
+.enter, .back {
   width: 100px;
   height: 50px;
   display: inline-block;
@@ -58,4 +65,8 @@
   background-color: lightgray;
   margin: 2px 0;
   border-radius: 10px;
+}
+
+h1{
+  margin: 0px;
 }
