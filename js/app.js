@@ -1,7 +1,7 @@
 let squareid = 0;
 let squarepid = 0;
 let userword=[]
-let theChosenOne = "CLEAN"
+let theChosenOne = TheChosenWord(getRandomInt(words.length))
 let one = theChosenOne.split('')
 let count = 0;
 let maxattempts = 6;
@@ -639,4 +639,64 @@ if(square[squareid] !== " " && squareid > 0 ){
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+function TheChosenWord (u){
+    let theChosenOne;
+    switch (u) {
+    case (0) :
+       return theChosenOne = words[0].A[getRandomInt(words[0].A.length)]
+    case (1) :
+       return theChosenOne = words[1].B[getRandomInt(words[1].B.length)]
+    case (2) :
+       return theChosenOne = words[2].C[getRandomInt(words[2].C.length)]
+    case (3) :
+       return theChosenOne = words[3].D[getRandomInt(words[3].D.length)]
+    case (4) :
+       return theChosenOne = words[4].E[getRandomInt(words[4].E.length)]
+    case (5) :
+       return theChosenOne = words[5].F[getRandomInt(words[5].F.length)]
+    case (6) :
+       return theChosenOne = words[6].G[getRandomInt(words[6].G.length)]
+    case (7) :
+       return theChosenOne = words[7].H[getRandomInt(words[7].H.length)]
+    case (8) :
+       return theChosenOne = words[8].I[getRandomInt(words[8].I.length)]
+    case (9) :
+       return theChosenOne = words[9].J[getRandomInt(words[9].J.length)]
+    case (10) :
+       return theChosenOne = words[10].K[getRandomInt(words[10].K.length)]
+    case (11) :
+       return theChosenOne = words[11].L[getRandomInt(words[11].L.length)]
+    case (12) :
+       return theChosenOne = words[12].M[getRandomInt(words[12].M.length)]
+    case (13) :
+       return theChosenOne = words[13].N[getRandomInt(words[13].N.length)]
+    case (14) :
+       return theChosenOne = words[14].O[getRandomInt(words[14].O.length)]
+    case (15) :
+       return theChosenOne = words[15].P[getRandomInt(words[15].P.length)]
+    case (16) :
+       return theChosenOne = words[16].Q[getRandomInt(words[16].Q.length)]
+    case (17) :
+       return theChosenOne = words[17].R[getRandomInt(words[17].R.length)]
+    case (18) :
+       return theChosenOne = words[18].S[getRandomInt(words[18].S.length)]
+    case (19) :
+       return theChosenOne = words[19].T[getRandomInt(words[19].T.length)]
+    case (20) :
+       return theChosenOne = words[20].U[getRandomInt(words[20].U.length)]
+    case (21) :
+       return theChosenOne = words[21].V[getRandomInt(words[21].V.length)]
+    case (22) :
+       return theChosenOne = words[22].W[getRandomInt(words[22].W.length)]
+    case (23) :
+       return theChosenOne = words[23].X[getRandomInt(words[23].X.length)]
+    case (24) :
+       return theChosenOne = words[24].Y[getRandomInt(words[24].Y.length)]
+    case (25) :
+       return theChosenOne = words[25].Z[getRandomInt(words[25].Z.length)]
+    default:
+        break;
+}
 }
