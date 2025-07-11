@@ -598,7 +598,6 @@ if(attempts < maxattempts){
 })
 })
 
-
 function enters() {
 
  for ( var i = 0 ; i < 5; i++) {
@@ -638,3 +637,6 @@ if(square[squareid] !== " " && squareid > 0 ){
 
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
