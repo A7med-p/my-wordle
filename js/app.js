@@ -16,18 +16,23 @@ letters.forEach(letter => {
  letter.addEventListener('click', () => {
     console.log('click')
     if(attempts < maxattempts){
-    if (squareid <= 4) {
+    if (squareid <= 4 && letter.innerText !== 'enter' && letter.innerText !== 'back') {
         square[squarepid].innerText = letter.innerText;
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
     }
+    if( letter.innerText == 'enter' && squareid == 5){
+        enters()
+    }
+    if (letter.innerText == 'back' && attempts !== maxattempts) {
+        backs()
+    }
 }
 })
 })
 
-enter.addEventListener('click',()=>{
-if (squareid == 5) {
+function enters() {
 
  for ( var i = 0 ; i < 5; i++) {
    for ( var j = 0 ; j < 5; j++) {
@@ -42,7 +47,6 @@ if (squareid == 5) {
     count++
     }
     attempts++
-
     if (userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
         attempts = 6
         console.log(attempts)
@@ -54,14 +58,16 @@ if (squareid == 5) {
         userword.pop()  
     }
 }
-})
 
-back.addEventListener('click',()=>{
-    console.log('click')
-    if(square[squareid] !== " "){
+function backs() {
+
+if(square[squareid] !== " " && squareid > 0 ){
+        console.log(squareid);
     square[squarepid-1].innerText = "";
     userword.pop()
     squareid = squareid - 1;
     squarepid = squarepid - 1;
-    }
-})
+}
+
+}
+
