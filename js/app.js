@@ -601,13 +601,31 @@ if(attempts < maxattempts){
 function enters() {
 
  for ( var i = 0 ; i < 5; i++) {
-   for ( var j = 0 ; j < 5; j++) {
+    square[count].style.backgroundColor = 'gray'
+   for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'gray'
+            }
             
-     if (userword[i] == one[j]) {
-        square[count].style.backgroundColor = 'yellow'
-     }
+        }
+   for ( var j = 0 ; j < 5; j++) {
      if (userword[i] == one[i]) {   
         square[count].style.backgroundColor = 'lightgreen'
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'lightgreen'
+            }
+            
+        }
+     }     
+     else if (userword[i] == one[j]) {
+        square[count].style.backgroundColor = 'yellow'
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'yellow'
+            }
+            
+        }
      }
     }
     count++
