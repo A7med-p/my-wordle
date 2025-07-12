@@ -13,7 +13,7 @@ let enter = document.querySelector('.enter')
 let back = document.querySelector('.back')
 let keyboards = document.querySelectorAll('body')
 
-letters.forEach(letter => {
+ letters.forEach(letter => {
  letter.addEventListener('click', () => {
     console.log('click')
     if(attempts < maxattempts){
@@ -23,8 +23,8 @@ letters.forEach(letter => {
         squareid = squareid + 1;
         squarepid = squarepid + 1;
     }
-    if( letter.innerText == 'enter' && squareid == 5){
-        switch (userword[0]) {
+if( letter.innerText == 'enter' && squareid == 5){
+  switch (userword[0]) {
     case "A":
         for (let i = 0; i < words[0].A.length; i++) {
              if (words[0].A[i] == userword.join('')) {
@@ -212,8 +212,10 @@ letters.forEach(letter => {
          default:
              break;
         }
-    }
-    if (letter.innerText == 'back' && attempts !== maxattempts) {
+}
+
+   
+if (letter.innerText == 'back' && attempts !== maxattempts) {
         backs()
     }
 }
@@ -391,16 +393,17 @@ switch (input.key) {
         e = " "
         break;
 }
+
 if(attempts < maxattempts){
 
-    if (squareid <= 4 && e !== 'Enter' && e !== 'Backspace' && e !== ' ') {
+ if (squareid <= 4 && e !== 'Enter' && e !== 'Backspace' && e !== ' ') {
         square[squarepid].innerText = e;
         userword.push(e)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
     }
 
-    if( e == 'Enter'&& squareid == 5){
+ if( e == 'Enter'&& squareid == 5){
         switch (userword[0]) {
     case "A":
         for (let i = 0; i < words[0].A.length; i++) {
@@ -410,175 +413,175 @@ if(attempts < maxattempts){
 }
              break;
     case "B":
-        for (let i = 0; i < words[0].B.length; i++) {
+        for (let i = 0; i < words[1].B.length; i++) {
              if (words[1].B[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "C":
-        for (let i = 0; i < words[0].C.length; i++) {
+        for (let i = 0; i < words[2].C.length; i++) {
              if (words[2].C[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "D":
-        for (let i = 0; i < words[0].D.length; i++) {
+        for (let i = 0; i < words[3].D.length; i++) {
              if (words[3].D[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "E":
-        for (let i = 0; i < words[0].E.length; i++) {
+        for (let i = 0; i < words[4].E.length; i++) {
              if (words[4].E[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "F":
-        for (let i = 0; i < words[0].F.length; i++) {
+        for (let i = 0; i < words[5].F.length; i++) {
              if (words[5].F[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "G":
-        for (let i = 0; i < words[0].G.length; i++) {
+        for (let i = 0; i < words[6].G.length; i++) {
              if (words[6].G[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "H":
-        for (let i = 0; i < words[0].H.length; i++) {
+        for (let i = 0; i < words[7].H.length; i++) {
              if (words[7].H[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "I":
-        for (let i = 0; i < words[0].I.length; i++) {
+        for (let i = 0; i < words[8].I.length; i++) {
              if (words[8].I[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "J":
-        for (let i = 0; i < words[0].J.length; i++) {
+        for (let i = 0; i < words[9].J.length; i++) {
              if (words[9].J[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "K":
-        for (let i = 0; i < words[0].K.length; i++) {
+        for (let i = 0; i < words[10].K.length; i++) {
              if (words[10].K[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "L":
-        for (let i = 0; i < words[0].L.length; i++) {
+        for (let i = 0; i < words[11].L.length; i++) {
              if (words[11].L[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "M":
-        for (let i = 0; i < words[0].M.length; i++) {
+        for (let i = 0; i < words[12].M.length; i++) {
              if (words[12].M[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "N":
-        for (let i = 0; i < words[0].N.length; i++) {
+        for (let i = 0; i < words[13].N.length; i++) {
              if (words[13].N[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "O":
-        for (let i = 0; i < words[0].O.length; i++) {
+        for (let i = 0; i < words[14].O.length; i++) {
              if (words[14].O[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "P":
-        for (let i = 0; i < words[0].P.length; i++) {
+        for (let i = 0; i < words[15].P.length; i++) {
              if (words[15].P[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "Q":
-        for (let i = 0; i < words[0].Q.length; i++) {
+        for (let i = 0; i < words[16].Q.length; i++) {
              if (words[16].Q[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "R":
-        for (let i = 0; i < words[0].R.length; i++) {
+        for (let i = 0; i < words[17].R.length; i++) {
              if (words[17].R[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "S":
-        for (let i = 0; i < words[0].S.length; i++) {
+        for (let i = 0; i < words[18].S.length; i++) {
              if (words[18].S[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "T":
-        for (let i = 0; i < words[0].T.length; i++) {
+        for (let i = 0; i < words[19].T.length; i++) {
              if (words[19].T[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "U":
-        for (let i = 0; i < words[0].U.length; i++) {
+        for (let i = 0; i < words[20].U.length; i++) {
              if (words[20].U[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "V":
-        for (let i = 0; i < words[0].V.length; i++) {
+        for (let i = 0; i < words[21].V.length; i++) {
              if (words[21].V[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "W":
-        for (let i = 0; i < words[0].W.length; i++) {
+        for (let i = 0; i < words[22].W.length; i++) {
              if (words[22].W[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "X":
-        for (let i = 0; i < words[0].X.length; i++) {
+        for (let i = 0; i < words[23].X.length; i++) {
              if (words[23].X[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "Y":
-        for (let i = 0; i < words[0].Y.length; i++) {
+        for (let i = 0; i < words[24].Y.length; i++) {
              if (words[24].Y[i] == userword.join('')) {
             enters()
     }
 }
              break;
     case "Z":
-        for (let i = 0; i < words[0].Z.length; i++) {
+        for (let i = 0; i < words[25].Z.length; i++) {
              if (words[25].Z[i] == userword.join('')) {
             enters()
     }
@@ -601,32 +604,36 @@ if(attempts < maxattempts){
 function enters() {
 
  for ( var i = 0 ; i < 5; i++) {
-    square[count].style.backgroundColor = 'gray'
-   for (let k = 0; k < letters.length; k++) {
+
+     square[count].style.backgroundColor = 'gray'
+     for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = 'gray'
-            }
-            
+            }  
         }
-   for ( var j = 0 ; j < 5; j++) {
+
+for ( var j = 0 ; j < 5; j++) {
+
      if (userword[i] == one[i]) {   
+
         square[count].style.backgroundColor = 'lightgreen'
         for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = 'lightgreen'
             }
-            
         }
      }     
+
      else if (userword[i] == one[j]) {
+
         square[count].style.backgroundColor = 'yellow'
         for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = 'yellow'
             }
-            
         }
      }
+
     }
     count++
     }
@@ -635,9 +642,7 @@ function enters() {
         attempts = 6
         console.log(attempts)
     }
-
     squareid = 0
-
     for (let i = 0; i < 5; i++) {
         userword.pop()  
     }
@@ -654,7 +659,6 @@ if(square[squareid] !== " " && squareid > 0 ){
 }
 
 }
-
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
