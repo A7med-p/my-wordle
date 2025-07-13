@@ -6,16 +6,24 @@ let squareid = 0;
 let squarepid = 0;
 let count = 0;
 let userword=[]
+let countsec = 60;
+let countmin = 9;
+let execut = false
+let counter = 0;
+let type = "timer"
+let info = false
 
 let letters = document.querySelectorAll('.sqrdown')
 let square = document.querySelectorAll('.sqrup')
 let enter = document.querySelector('.enter')
 let back = document.querySelector('.back')
 let keyboards = document.querySelectorAll('body')
-let reaet = document.querySelector('#reset')
+let resets = document.querySelector('.reset')
 let pop = document.querySelector('.popup')
 let help = document.querySelector('.help')
 let closeing = document.querySelector('.close-popup')
+let counts = document.querySelector('.counts')
+let countm = document.querySelector('.countm')
 
 
 console.log(theChosenOne);
@@ -29,6 +37,7 @@ console.log(theChosenOne);
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
+        if(type === "timer"){timer()}
     }
 if( letter.innerText == 'enter' && squareid == 5){
   switch (userword[0]) {
@@ -408,6 +417,8 @@ if(attempts < maxattempts){
         userword.push(e)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
+        if(type === "timer"){timer()}
+
     }
 
  if( e == 'Enter'&& squareid == 5){
@@ -645,10 +656,16 @@ for ( var j = 0 ; j < 5; j++) {
     count++
     }
     attempts++
-    if (userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
+    if (type === "timer" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
+        counter++
+        console.log(counter)
+        reset()
+    }
+    else if (type === "normal" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
         attempts = 6
         console.log(attempts)
     }
+
     squareid = 0
     for (let i = 0; i < 5; i++) {
         userword.pop()  
@@ -729,10 +746,8 @@ function TheChosenWord (u){
         break;
 }
 }
-
-reaet.addEventListener('click', ()=>{
-
-   theChosenOne = TheChosenWord(getRandomInt(words.length))
+function reset() {
+    theChosenOne = TheChosenWord(getRandomInt(words.length))
    one = theChosenOne.split('')
    console.log(theChosenOne)
    for (let i = 0; i < 30; i++) {
@@ -749,6 +764,9 @@ reaet.addEventListener('click', ()=>{
     squarepid = 0;
     count = 0;
     userword=[]
+}
+resets.addEventListener('click', ()=>{
+   reset()
 })
 
 help.addEventListener('click', ()=>{
@@ -760,8 +778,8 @@ closeing.addEventListener('click',()=>{
 })
 
 function timer (){
-    
-    if(execut == false){
+  
+if(execut == false){
      execut =true
     setInterval(function() {
     
@@ -771,10 +789,14 @@ function timer (){
     if (countsec == 0 && countmin !== 0) {
         countsec = countsec + 60
         countmin--;
-    }else if(countsec == 0){
-        countsec++
+    }else if(countsec == 0 && countmin == 0){
+        
+    }else if(countsec < 0){
+        countsec = 0
     }
+    
 
 }, 1000);
 }
 }
+
