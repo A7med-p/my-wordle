@@ -19,7 +19,9 @@ let enter = document.querySelector('.enter')
 let back = document.querySelector('.back')
 let keyboards = document.querySelectorAll('body')
 let resets = document.querySelector('.reset')
+let reset2 = document.querySelector('.reset2')
 let pop = document.querySelector('.popup')
+let popwin = document.querySelector('.popwin')
 let help = document.querySelector('.help')
 let closeing = document.querySelector('.close-popup')
 let counts = document.querySelector('.counts')
@@ -659,6 +661,7 @@ for ( var j = 0 ; j < 5; j++) {
     if (type === "timer" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
         counter++
         console.log(counter)
+        document.getElementById("corr").innerText = counter 
         reset()
     }
     else if (type === "normal" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
@@ -764,9 +767,37 @@ function reset() {
     squarepid = 0;
     count = 0;
     userword=[]
+    
 }
+
+function resetx() {
+    theChosenOne = TheChosenWord(getRandomInt(words.length))
+   one = theChosenOne.split('')
+   console.log(theChosenOne)
+   for (let i = 0; i < 30; i++) {
+    square[i].innerText = "";
+    square[i].style.backgroundColor = 'white'
+   }
+   for (let i = 0; i < 27; i++) {
+    letters[i].style.backgroundColor = 'white'
+   }
+
+    maxattempts = 6;
+    attempts = 0;
+    squareid = 0;
+    squarepid = 0;
+    count = 0;
+    userword=[]
+    countsec = 60;
+    countmin = 9;
+    execut = false
+    counter = 0;
+
+    
+}
+
 resets.addEventListener('click', ()=>{
-   reset()
+   resetx()
 })
 
 help.addEventListener('click', ()=>{
@@ -790,7 +821,7 @@ if(execut == false){
         countsec = countsec + 60
         countmin--;
     }else if(countsec == 0 && countmin == 0){
-        
+        popwin.style.display = "block";
     }else if(countsec < 0){
         countsec = 0
     }
@@ -800,3 +831,7 @@ if(execut == false){
 }
 }
 
+reset2.addEventListener('click',()=>{
+    resetx()
+    popwin.style.display = "none";
+})
