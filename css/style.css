@@ -1,9 +1,16 @@
+:root {
+  --main-color: wheat;
+  --sqrup-color: white;
+  --sqrdown-color: whitesmoke;
+  --other-color: lightgray;
+}
+
 body {
-  background-color: wheat;
+  background-color: var(--main-color);
   font-family: system-ui, sans-serif;
   text-align: center;
   margin: 0;
-  /* padding-top: 2px; */
+  
 }
 
 .sqrup {
@@ -15,7 +22,7 @@ body {
   text-align: center;
   line-height: 100px;
   vertical-align: top; 
-  background-color: white;
+  background-color: var(--sqrup-color);
   margin: 1px 0;
   border-radius: 10px;
   line-height: 1.5;
@@ -28,7 +35,7 @@ body {
   border: 2px solid black;
   font-size: 30px; 
   text-align: center;
-  background-color:lightgray;
+  background-color:squrdown-color;
   margin: 2px 0;
   border-radius: 10px;
 }
@@ -62,13 +69,20 @@ body {
   border: 2px solid black;
   font-size: 30px; 
   text-align: center;
-  background-color: lightgray;
+  background-color: var(--sqrdown-color);;
   margin: 2px 0;
   border-radius: 10px;
 }
 
-h1{
+h2{
   margin: 0px;
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #reset {
@@ -78,21 +92,125 @@ h1{
   justify-content: space-around;
   border: 2px solid black;
   font-size: 30px; 
-  background-color: lightgray;
+  background-color: var(--other-color);
   margin-top: 17px;
+  margin-left: 150px;
   border-radius: 10px;
   line-height: 1.5;
 }
 
-#help {
+.help {
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: space-around;
   border: 2px solid black;
   font-size: 30px; 
-  background-color: lightgray;
+  background-color: var(--other-color);
   margin-top: 17px;
+  margin-right: 150px;
   border-radius: 10px;
   line-height: 1.5;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  max-height: 75%;
+  border-radius: 10px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.close-popup {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  border: 2px solid black;
+  font-size: 15px; 
+  background-color: gray;
+  margin: 0px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.sqrgreen {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 30px; 
+  text-align: center;
+  background-color:lightgreen;
+  margin: 2px 0;
+  border-radius: 10px;
+}
+
+.sqryellow {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 30px; 
+  text-align: center;
+  background-color:yellow;
+  margin: 2px 0;
+  border-radius: 10px;
+}
+
+.sqrgray {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 30px; 
+  text-align: center;
+  background-color:gray;
+  margin: 2px 0;
+  border-radius: 10px;
+}
+
+.line1, .line2, .line3 {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+}
+
+.line1 {
+  margin-right: 127px;
+}
+
+.line2{
+  margin-right: 22px;
+}
+
+.line3 {
+  margin-right: 150px;
+}
+
+.popup-body {
+  padding: 20px;
+  text-align: left;
 }
