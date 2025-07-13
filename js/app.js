@@ -758,3 +758,23 @@ help.addEventListener('click', ()=>{
 closeing.addEventListener('click',()=>{
     pop.style.display = "none";
 })
+
+function timer (){
+    
+    if(execut == false){
+     execut =true
+    setInterval(function() {
+    
+    countsec--;
+    counts.innerText = countsec
+    countm.innerText = countmin
+    if (countsec == 0 && countmin !== 0) {
+        countsec = countsec + 60
+        countmin--;
+    }else if(countsec == 0){
+        countsec++
+    }
+
+}, 1000);
+}
+}
