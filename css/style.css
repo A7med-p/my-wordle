@@ -1,16 +1,18 @@
 :root {
-  --main-color: wheat;
+  --main-color: white;
   --sqrup-color: white;
-  --sqrdown-color: whitesmoke;
+  --sqrdown-color: white;
   --other-color: lightgray;
+  --wrong-latter:gray;
+  --text-color:black;
 }
 
-body {
+body{
   background-color: var(--main-color);
   font-family: system-ui, sans-serif;
   text-align: center;
   margin: 0;
-  
+  color: var(--text-color);
 }
 
 .sqrup {
@@ -35,9 +37,10 @@ body {
   border: 2px solid black;
   font-size: 30px; 
   text-align: center;
-  background-color:squrdown-color;
+  background-color:var(--sqrdown-color);
   margin: 2px 0;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 .board1, .board2, .board3, .board4, .board5, .board6 {
@@ -72,6 +75,7 @@ body {
   background-color: var(--sqrdown-color);;
   margin: 2px 0;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 h2{
@@ -85,7 +89,7 @@ header {
   align-items: center;
 }
 
-#reset {
+.reset {
   width: 50px;
   height: 50px;
   display: flex;
@@ -97,6 +101,7 @@ header {
   margin-left: 150px;
   border-radius: 10px;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .help {
@@ -111,6 +116,7 @@ header {
   margin-right: 150px;
   border-radius: 10px;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .popup {
@@ -125,6 +131,7 @@ header {
   margin: 0;
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
+  color: var(--text-color);
 }
 
 .popup-content {
@@ -136,6 +143,7 @@ header {
   max-width: 600px;
   max-height: 75%;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 .popup-header {
@@ -150,10 +158,11 @@ header {
   display: flex;
   border: 2px solid black;
   font-size: 15px; 
-  background-color: gray;
+  background-color: var(--wrong-latter);
   margin: 0px;
   border-radius: 10px;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .sqrgreen {
@@ -166,6 +175,7 @@ header {
   background-color:lightgreen;
   margin: 2px 0;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 .sqryellow {
@@ -178,6 +188,7 @@ header {
   background-color:yellow;
   margin: 2px 0;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 .sqrgray {
@@ -187,15 +198,17 @@ header {
   border: 2px solid black;
   font-size: 30px; 
   text-align: center;
-  background-color:gray;
+  background-color:var(--wrong-latter);
   margin: 2px 0;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 .line1, .line2, .line3 {
   display: flex;
   justify-content: space-around;
   max-width: 600px;
+  color: var(--text-color);
 }
 
 .line1 {
@@ -213,4 +226,37 @@ header {
 .popup-body {
   padding: 20px;
   text-align: left;
+  color: var(--text-color);
+}
+
+.return {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  font-size: 30px; 
+  background-color: var(--other-color);
+  margin-top: 17px;
+  margin-right: 10px;
+  border-radius: 10px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.spa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.counts{
+  margin-right: 75px;
 }
