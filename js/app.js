@@ -12,6 +12,11 @@ let square = document.querySelectorAll('.sqrup')
 let enter = document.querySelector('.enter')
 let back = document.querySelector('.back')
 let keyboards = document.querySelectorAll('body')
+let reaet = document.querySelector('#reset')
+let pop = document.querySelector('.popup')
+let help = document.querySelector('.help')
+let closeing = document.querySelector('.close-popup')
+
 
 console.log(theChosenOne);
 
@@ -744,4 +749,12 @@ reaet.addEventListener('click', ()=>{
     squarepid = 0;
     count = 0;
     userword=[]
+})
+
+help.addEventListener('click', ()=>{
+    pop.style.display = "block";
+})
+    
+closeing.addEventListener('click',()=>{
+    pop.style.display = "none";
 })
