@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/data.js"></script>
-    <script defer src="./js/app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./data.js"></script>
+    <script defer src="./app.js"></script>
     <title>My game!!</title>
 </head>
 
 <body>
-  <header>
-  <button id="help">?</button>
-  <h1>My Wordle</h1>
-  <button id="reset">⟳</button>
-  </header>
   
-  <div class="popup">
+<header>
+<span class="spa"><button class="return"><a href="index3.html">←</a></button><button class="help">?</button></span>
+  <h2>My Wordle</h2>
+  <button class="reset">⟳</button>
+</header>
+
+<div class="popup">
    <div class="popup-content">
      <div class="popup-header">
       <button class="close-popup">X</button>
@@ -32,6 +33,19 @@
      </div>
      </div>
    </div>
+</div>
+
+<div class="popwin">
+   <div class="popup-content">
+     <div class="popup-header">
+      <button class="reset2">⟳</button>
+     </div>
+     <div class="popup-body">
+        <h1>you got</h1>
+        <h1 id="corr">0</h1>
+        <h1>correct</h1>
+     </div>
+     </div>
 </div>
 
 <section class="board1">
@@ -108,7 +122,7 @@
 </section>
 
 <section class="letters3">
-  <button class="enter" id="enter">enter</button>
+  <button class="enter sqrdown" id="enter">enter</button>
   <button class="sqrdown" id="z">Z</button>
   <button class="sqrdown" id="x">X</button>
   <button class="sqrdown" id="c">C</button>
@@ -116,8 +130,8 @@
   <button class="sqrdown" id="b">B</button>
   <button class="sqrdown" id="n">N</button>
   <button class="sqrdown" id="m">M</button>
-  <button class="back" id="backspace">back</button>
+  <button class="back sqrdown" id="backspace">back</button>
 </section>
- 
+
 </body>
 </html>

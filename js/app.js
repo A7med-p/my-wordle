@@ -7,7 +7,7 @@ let squarepid = 0;
 let count = 0;
 let userword=[]
 let countsec = 60;
-let countmin = 9;
+let countmin = 2;
 let execut = false
 let counter = 0;
 let type = "timer"
@@ -660,6 +660,11 @@ for ( var j = 0 ; j < 5; j++) {
     attempts++
     if (type === "timer" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
         counter++
+        countsec = countsec+30
+        if (countsec>=61) {
+            countmin++
+            countsec=countsec-60
+        }
         console.log(counter)
         document.getElementById("corr").innerText = counter 
         reset()
@@ -789,7 +794,7 @@ function resetx() {
     count = 0;
     userword=[]
     countsec = 60;
-    countmin = 9;
+    countmin = 2;
     execut = false
     counter = 0;
 

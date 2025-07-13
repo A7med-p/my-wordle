@@ -251,10 +251,12 @@ header {
 }
 
 .timer{
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0px;
+  color: var(--text-color);
 }
 
 .counts{
@@ -287,4 +289,8 @@ header {
   border-radius: 10px;
   line-height: 1.5;
   color: var(--text-color);
+}
+
+h3{
+  margin: 0px;
 }
