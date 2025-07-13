@@ -724,3 +724,24 @@ function TheChosenWord (u){
         break;
 }
 }
+
+reaet.addEventListener('click', ()=>{
+
+   theChosenOne = TheChosenWord(getRandomInt(words.length))
+   one = theChosenOne.split('')
+   console.log(theChosenOne)
+   for (let i = 0; i < 30; i++) {
+    square[i].innerText = "";
+    square[i].style.backgroundColor = 'white'
+   }
+   for (let i = 0; i < 27; i++) {
+    letters[i].style.backgroundColor = 'white'
+   }
+
+    maxattempts = 6;
+    attempts = 0;
+    squareid = 0;
+    squarepid = 0;
+    count = 0;
+    userword=[]
+})
