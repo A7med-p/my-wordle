@@ -5,6 +5,8 @@
   --other-color: lightgray;
   --wrong-latter:gray;
   --text-color:black;
+  --yellow-color: yellow;
+  --green-color: #2aa42a;
 }
 
 body{
@@ -143,13 +145,14 @@ header {
   max-width: 600px;
   max-height: 75%;
   border-radius: 10px;
-  color: var(--text-color);
+  color: black;
 }
 
 .popup-header {
   display: flex;
   justify-content: right;
   align-items: center;
+  color: black;
 }
 
 .close-popup {
@@ -162,7 +165,7 @@ header {
   margin: 0px;
   border-radius: 10px;
   line-height: 1.5;
-  color: var(--text-color);
+  color: black;
 }
 
 .sqrgreen {
@@ -172,7 +175,7 @@ header {
   border: 2px solid black;
   font-size: 30px; 
   text-align: center;
-  background-color:lightgreen;
+  background-color:var(--green-color);
   margin: 2px 0;
   border-radius: 10px;
   color: var(--text-color);
@@ -185,7 +188,7 @@ header {
   border: 2px solid black;
   font-size: 30px; 
   text-align: center;
-  background-color:yellow;
+  background-color:var(--yellow-color);
   margin: 2px 0;
   border-radius: 10px;
   color: var(--text-color);
@@ -208,7 +211,7 @@ header {
   display: flex;
   justify-content: space-around;
   max-width: 600px;
-  color: var(--text-color);
+  color: black;
 }
 
 .line1 {
@@ -226,7 +229,7 @@ header {
 .popup-body {
   padding: 20px;
   text-align: left;
-  color: var(--text-color);
+  color: black;
 }
 
 .return {
@@ -251,16 +254,23 @@ header {
 }
 
 .timer{
+  max-width: 300px;
   font-size: 25px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
   margin-top: 0px;
+  margin-left: 0px;
   color: var(--text-color);
 }
 
 .counts{
   margin-right: 75px;
+  margin-top: 5px;
+}
+
+.countm{
+  margin-top: 5px;
 }
 
 .popwin{
@@ -275,7 +285,6 @@ header {
   margin: 0;
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
-  color: var(--text-color);
 }
 
 .reset2{
@@ -423,4 +432,43 @@ a{
   border-radius: 10px;
   line-height: 1.5;
   color: var(--text-color);
+}
+
+.ttime{
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 17px;
+}
+
+.tim{
+  max-width: 120px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 30px; 
+  text-align: center;
+  background-color: var(--other-color);
+  margin: 0px;
+  border-radius: 10px;
+  color: var(--text-color);
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake{
+  animation-name: shake;
+  animation-duration: 0.5s;
 }

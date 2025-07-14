@@ -14,8 +14,24 @@
 <header>
 <span class="spa"><button class="return"><a href="index3.html">←</a></button><button class="help">?</button></span>
   <h2>My Wordle</h2>
-  <button class="reset">⟳</button>
+  <span class="spa"><button class="reset">⟳</button><button class="sitting">⚙</button></span>
 </header>
+
+<div class="sittings">
+   <div class="sitting-content">
+     <div class="popup-header">
+      <button class="close-sitting">X</button>
+      
+     </div>
+     <div class="popup-body">
+        <h1>change style:</h1>
+     </div>
+     <div class="sitting-buttons">
+     <span class="spa"><button class="normal-style">X</button><button class="blue-style">X</button><button class="night-style">X</button></span>
+     
+     </div>
+     </div>
+</div>
 
 <div class="popup">
    <div class="popup-content">
@@ -23,7 +39,7 @@
       <button class="close-popup">X</button>
      </div>
      <div class="popup-body">
-        <h2>How to play:</h2>
+        <h1>How to play:</h1>
         <p>Guess the word in 6 tries.</p>
         <p>Each guess must be a valid 5-letter word.</p>
         <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
@@ -32,7 +48,6 @@
         <div class="line3"><div class="sqrgray">X</div><p>Gray means the letter is not in the word at all.</p></div>
      </div>
      </div>
-   </div>
 </div>
 
 <div class="popwin">
@@ -132,6 +147,6 @@
   <button class="sqrdown" id="m">M</button>
   <button class="back sqrdown" id="backspace">back</button>
 </section>
-
+<button class="tim" style="display: none;"><a href="index2.html">timer</a></button>
 </body>
 </html>
