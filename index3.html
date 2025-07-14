@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./data.js"></script>
+    <script defer src="./app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <div class="title">
+      <h1>Wordle</h1>
+    </div>
+    <div class="choice">
+    <h4>Welcome to the wordle game</h4>
+    <h4>Click on the button below to chose the mod</h4>
+    <button class="norm"><a href="index.html">normal</a></button>
+    <button class="tim"><a href="index2.html">timer</a></button>
+    </div>
+</section>
+    <button class="sitting">⚙</button>
+
+
+<div class="sittings">
+   <div class="sitting-content">
+     <div class="popup-header">
+      <button class="close-sitting">X</button>
+      
+     </div>
+     <div class="popup-body">
+        <h1>change style:</h1>
+     </div>
+     <div class="sitting-buttons">
+     <span class="spa"><button class="normal-style">X</button><button class="blue-style">X</button><button class="night-style">X</button></span>
+     
+     </div>
+     </div>
+</div>
+
+<div class="popup">
+   <div class="popup-content">
+     <div class="popup-header">
+      <button class="close-popup">X</button>
+     </div>
+     <div class="popup-body">
+        <h1>How to play:</h1>
+        <p>Guess the word in 6 tries.</p>
+        <p>Each guess must be a valid 5-letter word.</p>
+        <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
+        <div class="line1"><div class="sqrgreen">X</div><p>Green means the letter is in the correct position.</p></div>
+        <div class="line2"><div class="sqryellow">X</div><p>Yellow means the letter is in the word but in the wrong position.</p></div>
+        <div class="line3"><div class="sqrgray">X</div><p>Gray means the letter is not in the word at all.</p></div>
+     </div>
+     </div>
+</div>
+
+<div class="popwin">
+   <div class="popup-content">
+     <div class="popup-header">
+      <button class="reset2">⟳</button>
+     </div>
+     <div class="popup-body">
+        <h1>you got</h1>
+        <h1 id="corr">0</h1>
+        <h1>correct</h1>
+     </div>
+     </div>
+</div>
+
+<button class="reset" style="display: none;">⟳</button><span class="spa" style="display: none;"><button class="return"><a href="index3.html">←</a></button><button class="help">?</button></span>
+</body>
+</html>
