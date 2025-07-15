@@ -1,5 +1,11 @@
 let theChosenOne = TheChosenWord(getRandomInt(words.length))
 let one = theChosenOne.split('')
+let theChosenFood = words[26].Food[getRandomInt(words[26].Food.length)]
+let two = theChosenFood.split('')
+let theChosenAnime = words[27].Anime[getRandomInt(words[27].Anime.length)]
+let four = theChosenAnime.split('')
+let theChosenAnimal = words[28].Animal[getRandomInt(words[28].Animal.length)]
+let three = theChosenAnimal.split('')
 let maxattempts = 6;
 let attempts = 0;
 let squareid = 0;
@@ -12,9 +18,13 @@ let execut = false
 let counter = 0;
 let type = "normal";
 let info = false
+let category = "normal";
+let ls = 0;
 
 let letters = document.querySelectorAll('.sqrdown')
 let square = document.querySelectorAll('.sqrup')
+let square2 = document.querySelectorAll('.sqrup2')
+let square3 = document.querySelectorAll('.sqrup3')
 let enter = document.querySelector('.enter')
 let back = document.querySelector('.back')
 let keyboards = document.querySelectorAll('body')
@@ -41,21 +51,76 @@ let board3 = document.querySelector('.board3')
 let board4 = document.querySelector('.board4')
 let board5 = document.querySelector('.board5')
 let board6 = document.querySelector('.board6')
+let food1 = document.querySelector('.food1')
+let food2 = document.querySelector('.food2')
+let food3 = document.querySelector('.food3')
+let food4 = document.querySelector('.food4')
+let food5 = document.querySelector('.food5')
+let food6 = document.querySelector('.food6')
+let animal1 = document.querySelector('.animal1')
+let animal2 = document.querySelector('.animal2')
+let animal3 = document.querySelector('.animal3')
+let animal4 = document.querySelector('.animal4')
+let animal5 = document.querySelector('.animal5')
+let animal6 = document.querySelector('.animal6')
+let anime1 = document.querySelector('.anime1')
+let anime2 = document.querySelector('.anime2')
+let anime3 = document.querySelector('.anime3')
+let anime4 = document.querySelector('.anime4')
+let anime5 = document.querySelector('.anime5')
+let anime6 = document.querySelector('.anime6')
+let categor = document.querySelector('.categorys')
+let foods = document.querySelector('.foods')
+let food = document.querySelector('.food')
+let foodt = document.querySelector('.foodt')
+let animals = document.querySelector('.animals')
+let animal = document.querySelector('.animal')
+let animalt = document.querySelector('.animalt')
+let animes = document.querySelector('.animes')
+let anime = document.querySelector('.anime')
+let animet = document.querySelector('.animet')
+let cat = document.querySelector('.cat')
+let loss = document.querySelector('.loss')
+let closingl = document.querySelector('.close-loss')
+let categorysc = document.querySelector('.categorys-c')
+let corr = document.querySelector('.corr')
+let lcount = document.querySelector('.l-count')
 
-console.log(theChosenOne);
+console.log("anime: "+theChosenAnime);
+console.log("animal: "+theChosenAnimal);
+console.log("food: "+theChosenFood);
 
 letters.forEach(letter => {
  letter.addEventListener('click', () => {
     
-    if(attempts < maxattempts){
-    if (squareid <= 4 && letter.innerText !== 'enter' && letter.innerText !== 'back') {
+if(attempts < maxattempts){
+    if (squareid <= 4 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "normal") {
         square[squarepid].innerText = letter.innerText;
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
         if(type === "timer"){timer()}
     }
-if( letter.innerText == 'enter' && squareid == 5){
+    if (squareid <= 5 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "food") {
+        square[squarepid].innerText = letter.innerText;
+        userword.push(letter.innerText)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+    }
+    if (squareid <= 3 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "animal") {
+        square2[squarepid].innerText = letter.innerText;
+        userword.push(letter.innerText)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+    }
+    if (squareid <= 5 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "anime") {
+        square3[squarepid].innerText = letter.innerText;
+        userword.push(letter.innerText)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+    }
+
+if( letter.innerText == 'enter' && squareid == 5 && category == "normal"){
   switch (userword[0]) {
     case "A":
         for (let i = 0; i < words[0].A.length; i++) {
@@ -998,6 +1063,114 @@ if( letter.innerText == 'enter' && squareid == 5){
              break;
         }
 }
+if( letter.innerText == 'enter' && squareid == 6 && category == "food"){
+  for (let i = 0; i < words[26].Food.length; i++) {
+    if (words[26].Food[i] == userword.join('')) {
+        enters()
+        info = true
+        break;
+        }
+}
+        if(info == false){
+            info = true
+            switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+    info = false
+}
+if( letter.innerText == 'enter' && squareid == 4 && category == "animal"){
+  for (let i = 0; i < words[28].Animal.length; i++) {
+    if (words[28].Animal[i] == userword.join('')) {
+        enters()
+        info = true
+        break;
+        }
+}
+        if(info == false){
+            info = true
+            switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+    info = false
+}
+if( letter.innerText == 'enter' && squareid == 6 && category == "animal"){
+  for (let i = 0; i < words[27].Anime.length; i++) {
+    if (words[27].Anime[i] == userword.join('')) {
+        enters()
+        info = true
+        break;
+        }
+}
+        if(info == false){
+            info = true
+            switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+    info = false
+}
 
 if (letter.innerText == 'back' && attempts !== maxattempts) {
         backs()
@@ -1179,8 +1352,7 @@ switch (input.key) {
 }
 
 if(attempts < maxattempts){
-
- if (squareid <= 4 && e !== 'Enter' && e !== 'Backspace' && e !== ' ') {
+    if (squareid <= 4 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "normal") {
         square[squarepid].innerText = e;
         userword.push(e)
         squareid = squareid + 1;
@@ -1188,8 +1360,27 @@ if(attempts < maxattempts){
         if(type === "timer"){timer()}
 
     }
+    if (squareid <= 5 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "food") {
+        square[squarepid].innerText = e;
+        userword.push(e)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+    }
+    if (squareid <= 3 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "animal") {
+        square2[squarepid].innerText = e;
+        userword.push(e)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+    }
+    if (squareid <= 5 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "anime") {
+        square3[squarepid].innerText = e;
+        userword.push(e)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+    }
+    
 
- if( e == 'Enter'&& squareid == 5){
+if( e == 'Enter'&& squareid == 5 && category == "normal"){
         switch (userword[0]) {
     case "A":
         for (let i = 0; i < words[0].A.length; i++) {
@@ -2134,7 +2325,117 @@ if(attempts < maxattempts){
              break;
         }
     }
+if( e == 'Enter'&& squareid == 6 && category == "food"){
+ for (let i = 0; i < words[26].Food.length; i++) {
+    if (words[26].Food[i] == userword.join('')) {
+        enters()
+        info = true
+        break;
+        }
+}
+        if(info == false){
+            info = true
+            switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+    info = false
+    }
+if( e == 'Enter'&& squareid == 4 && category == "animal"){
+ for (let i = 0; i < words[28].Animal.length; i++) {
+    if (words[28].Animal[i] == userword.join('')) {
+        enters()
+        info = true
+        break;
+        }
+}
+        if(info == false){
+            info = true
+            switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+    info = false
+    }
+if( e == 'Enter'&& squareid == 6 && category == "anime"){
+ for (let i = 0; i < words[27].Anime.length; i++) {
+    if (words[27].Anime[i] == userword.join('')) {
+        enters()
+        info = true
+        break;
+        }
+}
+        if(info == false){
+            info = true
+            switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+    info = false
+    }
+
     if (e == 'Backspace' && attempts !== maxattempts) {
+        
         backs()
         
     }
@@ -2143,6 +2444,9 @@ if(attempts < maxattempts){
 })
 
 function enters() {
+    console.log(userword);
+if (category == "normal") {
+    
 
 for ( var i = 0 ; i < 5; i++) {
 
@@ -2199,11 +2503,193 @@ for (let i = 0; i < 5; i++) {
 }
 }
 
+if (category == "food") {
+    
+for ( var i = 0 ; i < 6; i++) {
+
+     square[count].style.backgroundColor = 'gray'
+    for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'gray'
+            }
+    }
+
+for ( var j = 0 ; j < 6; j++) {
+
+    if (userword[i] == two[i]) {   
+
+        square[count].style.backgroundColor = "#2aa42a"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#2aa42a"
+            }
+        }
+
+    }else if (userword[i] == two[j]) {
+
+        square[count].style.backgroundColor = "#c9c946ff"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#c9c946ff"
+            }
+        }
+    }
+}
+count++
+}
+attempts++
+if (userword[0] == two[0] && userword[1] == two[1] && userword[2] == two[2] && userword[3] == two[3] && userword[4] == two[4] && userword[5] == two[5]) {
+        attempts = 6
+        counter++
+        ls++
+        corr.innerText = counter
+        categorysc.style.display = "block"; 
+}else if(attempts == maxattempts){
+    lcount.innerText = ls
+    loss.style.display = "block";}
+
+ squareid = 0
+for (let i = 0; i < 6; i++) {
+        userword.pop()  
+}
+}
+
+if (category == "animal") {
+    
+for ( var i = 0 ; i < 4; i++) {
+
+     square2[count].style.backgroundColor = 'gray'
+    for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'gray'
+            }
+    }
+
+for ( var j = 0 ; j < 4; j++) {
+
+    if (userword[i] == three[i]) {   
+
+        square2[count].style.backgroundColor = "#2aa42a"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#2aa42a"
+            }
+        }
+
+    }else if (userword[i] == three[j]) {
+
+        square2[count].style.backgroundColor = "#c9c946ff"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#c9c946ff"
+            }
+        }
+    }
+}
+count++
+}
+attempts++
+if (userword[0] == three[0] && userword[1] == three[1] && userword[2] == three[2] && userword[3] == three[3] ) {
+        attempts = 6
+        counter++
+        ls++
+        corr.innerText = counter 
+        categorysc.style.display = "block";
+}else if(attempts == maxattempts){
+    lcount.innerText = ls
+    loss.style.display = "block";
+}
+
+ squareid = 0
+for (let i = 0; i < 4; i++) {
+        userword.pop()  
+}
+}
+
+if (category == "anime") {
+    
+for ( var i = 0 ; i < 6; i++) {
+
+     square3[count].style.backgroundColor = 'gray'
+    for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'gray'
+            }
+    }
+
+for ( var j = 0 ; j < 6; j++) {
+
+    if (userword[i] == four[i]) {   
+
+        square3[count].style.backgroundColor = "#2aa42a"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#2aa42a"
+            }
+        }
+
+    }else if (userword[i] == four[j]) {
+
+        square3[count].style.backgroundColor = "#c9c946ff"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#c9c946ff"
+            }
+        }
+    }
+}
+count++
+}
+attempts++
+if (userword[0] == four[0] && userword[1] == four[1] && userword[2] == four[2] && userword[3] == four[3] && userword[4] == four[4] && userword[5] == four[5]) {
+        attempts = 6
+        counter++
+        ls++
+        corr.innerText = counter 
+        categorysc.style.display = "block";
+}else if(attempts == maxattempts){
+    lcount.innerText = ls
+    loss.style.display = "block";
+}
+
+ squareid = 0
+for (let i = 0; i < 6; i++) {
+        userword.pop()  
+}
+}
+}
+
 function backs() {
 
-if(square[squareid] !== " " && squareid > 0 ){
+if(square[squareid] !== " " && squareid > 0 && category == "normal" ){
         
     square[squarepid-1].innerText = "";
+    userword.pop()
+    squareid = squareid - 1;
+    squarepid = squarepid - 1;
+}
+
+if(square[squareid] !== " " && squareid > 0 && category == "food"){
+        
+    square[squarepid-1].innerText = "";
+    userword.pop()
+    squareid = squareid - 1;
+    squarepid = squarepid - 1;
+}
+
+if(square2[squareid] !== " " && squareid > 0 && category == "animal"){
+    console.log(squarepid);
+        
+    square2[squarepid-1].innerText = "";
+    userword.pop()
+    squareid = squareid - 1;
+    squarepid = squarepid - 1;
+}
+
+if(square3[squareid] !== " " && squareid > 0 && category == "anime"){
+    console.log(squarepid);
+        
+    square3[squarepid-1].innerText = "";
     userword.pop()
     squareid = squareid - 1;
     squarepid = squarepid - 1;
@@ -2280,14 +2766,50 @@ function TheChosenWord (u){
         break;
 }
 }
+
 function reset() {
    theChosenOne = TheChosenWord(getRandomInt(words.length))
    one = theChosenOne.split('')
-   console.log(theChosenOne)
+   theChosenFood = words[26].Food[getRandomInt(words[26].Food.length)]
+   two = theChosenFood.split('')
+   theChosenAnime = words[27].Anime[getRandomInt(words[27].Anime.length)]
+   four = theChosenAnime.split('')
+   theChosenAnimal = words[28].Animal[getRandomInt(words[28].Animal.length)]
+   three = theChosenAnimal.split('')
+
+   console.log("anime: "+theChosenAnime);
+   console.log("animal: "+theChosenAnimal);
+   console.log("food: "+theChosenFood);
+   
+if (category == "normal") {
    for (let i = 0; i < 30; i++) {
     square[i].innerText = "";
     square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
+}
+   
+   if (category == "food") {
+    for (let i = 0; i < 36; i++) {
+    square[i].innerText = "";
+    square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   
+   }
+   if (category == "animal") {
+    for (let i = 0; i < 24; i++) {
+    square2[i].innerText = "";
+    square2[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   
+   }
+   if (category == "anime") {
+    for (let i = 0; i < 36; i++) {
+    square3[i].innerText = "";
+    square3[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   
+   }
+   
    for (let i = 0; i < 27; i++) {
     letters[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
@@ -2302,13 +2824,47 @@ function reset() {
 }
 
 function resetx() {
-    theChosenOne = TheChosenWord(getRandomInt(words.length))
+   theChosenOne = TheChosenWord(getRandomInt(words.length))
    one = theChosenOne.split('')
-   console.log(theChosenOne)
+   theChosenFood = words[26].Food[getRandomInt(words[26].Food.length)]
+   two = theChosenFood.split('')
+   theChosenAnime = words[27].Anime[getRandomInt(words[27].Anime.length)]
+   four = theChosenAnime.split('')
+   theChosenAnimal = words[28].Animal[getRandomInt(words[28].Animal.length)]
+   three = theChosenAnimal.split('')
+   
+console.log("anime: "+theChosenAnime);
+console.log("animal: "+theChosenAnimal);
+console.log("food: "+theChosenFood);
+
+   if (category == "normal") {
    for (let i = 0; i < 30; i++) {
     square[i].innerText = "";
     square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
+   }
+   if (category == "food") {
+    for (let i = 0; i < 36; i++) {
+    square[i].innerText = "";
+    square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   categor.style.display = "block";
+   }
+   if (category == "animal") {
+    for (let i = 0; i < 24; i++) {
+    square2[i].innerText = "";
+    square2[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   categor.style.display = "block";
+   }
+   if (category == "anime") {
+    for (let i = 0; i < 36; i++) {
+    square3[i].innerText = "";
+    square3[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   categor.style.display = "block";
+   }
+   
    for (let i = 0; i < 27; i++) {
     letters[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
@@ -2322,7 +2878,10 @@ function resetx() {
     countsec = 60;
     countmin = 2;
     execut = false
-    counter = 0;
+    if (type == "time") {
+    counter = 0; 
+    }
+    
 
     
 }
@@ -2385,7 +2944,6 @@ nstyle.addEventListener('click',()=>{
   root.style.setProperty('--text-color'," black");
   root.style.setProperty('--yellow-color', "yellow");
   root.style.setProperty('--green-color', "#2aa42a");
-  resetx()
 })
 
 bstyle.addEventListener('click',()=>{
@@ -2397,7 +2955,6 @@ bstyle.addEventListener('click',()=>{
   root.style.setProperty('--text-color', "white");
   root.style.setProperty('--yellow-color', "#bdbd31ff");
   root.style.setProperty('--green-color', "green");
-  resetx()
 })
 
 dstyle.addEventListener('click',()=>{
@@ -2409,7 +2966,6 @@ dstyle.addEventListener('click',()=>{
   root.style.setProperty('--text-color', "white");
   root.style.setProperty('--yellow-color', "#bdbd31ff");
   root.style.setProperty('--green-color', "green");
-  resetx()
 })
 
 tim.addEventListener('click',()=>{
@@ -2420,49 +2976,150 @@ tim.addEventListener('click',()=>{
 })
 
 function shake1(){
+animal1.classList.add('shake')
+food1.classList.add('shake')
+anime1.classList.add('shake')
     return board1.classList.add('shake')
 }
 
 function noshake1(){
+animal1.classList.remove('shake')
+food1.classList.remove('shake')
+anime1.classList.remove('shake')
     return board1.classList.remove('shake')
 }
 
 function shake2(){
+animal2.classList.add('shake')
+food2.classList.add('shake')
+anime2.classList.add('shake')
     return board2.classList.add('shake')
 }
 
 function noshake2(){
+animal2.classList.remove('shake')
+food2.classList.remove('shake')
+anime2.classList.remove('shake')
     return board2.classList.remove('shake')
 }
 
 function shake3(){
+animal3.classList.add('shake')
+food3.classList.add('shake')
+anime3.classList.add('shake')
     return board3.classList.add('shake')
 }
 
 function noshake3(){
+animal3.classList.remove('shake')
+food3.classList.remove('shake')
+anime3.classList.remove('shake')
     return board3.classList.remove('shake')
 }
 
 function shake4(){
+animal4.classList.add('shake')
+food4.classList.add('shake')
+anime4.classList.add('shake')
     return board4.classList.add('shake')
 }
 
 function noshake4(){
+animal4.classList.remove('shake')
+food4.classList.remove('shake')
+anime4.classList.remove('shake')
     return board4.classList.remove('shake')
 }
 
 function shake5(){
+animal5.classList.add('shake')
+food5.classList.add('shake')
+anime5.classList.add('shake')
     return board5.classList.add('shake')
 }
 
 function noshake5(){
+animal5.classList.remove('shake')
+food5.classList.remove('shake')
+anime5.classList.remove('shake')
     return board5.classList.remove('shake')
 }
 
 function shake6(){
+animal6.classList.add('shake')
+food6.classList.add('shake')
+anime6.classList.add('shake')
     return board6.classList.add('shake')
 }
 
 function noshake6(){
+animal6.classList.remove('shake')
+food6.classList.remove('shake')
+anime6.classList.remove('shake')
     return board6.classList.remove('shake')
 }
+
+food.addEventListener('click',()=>{
+    foods.style.display = "block";
+    animals.style.display = "none";
+    animes.style.display = "none";
+    category = "food"
+    categor.style.display = "none";
+    cat.innerText = "foods"
+    reset()
+})
+
+animal.addEventListener('click',()=>{
+    animals.style.display = "block";
+    animes.style.display = "none";
+    foods.style.display = "none";
+    category = "animal"
+    categor.style.display = "none";
+    cat.innerText = "animals"
+    reset()
+})
+
+anime.addEventListener('click',()=>{
+    animes.style.display = "block";
+    animals.style.display = "none";
+    foods.style.display = "none";
+    category = "anime"
+    categor.style.display = "none";
+    cat.innerText = "anime"
+    reset()
+})
+
+closingl.addEventListener('click',()=>{
+    loss.style.display = "none";
+    counter = 0;
+})
+
+foodt.addEventListener('click',()=>{
+    foods.style.display = "block";
+    animals.style.display = "none";
+    animes.style.display = "none";
+    category = "food"
+    categorysc.style.display = "none";
+    cat.innerText = "foods"
+    reset()
+})
+
+animalt.addEventListener('click',()=>{
+    animals.style.display = "block";
+    animes.style.display = "none";
+    foods.style.display = "none";
+    category = "animal"
+    categorysc.style.display = "none";
+    cat.innerText = "animals"
+    reset()
+})
+
+animet.addEventListener('click',()=>{
+    animes.style.display = "block";
+    animals.style.display = "none";
+    foods.style.display = "none";
+    category = "anime"
+    categorysc.style.display = "none";
+    cat.innerText = "anime"
+    reset()
+})
