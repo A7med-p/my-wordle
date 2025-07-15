@@ -85,6 +85,7 @@ let closingl = document.querySelector('.close-loss')
 let categorysc = document.querySelector('.categorys-c')
 let corr = document.querySelector('.corr')
 let lcount = document.querySelector('.l-count')
+let word = document.querySelector('.word')
 
 console.log("anime: "+theChosenAnime);
 console.log("animal: "+theChosenAnimal);
@@ -2495,6 +2496,9 @@ if (type === "timer" && userword[0] == one[0] && userword[1] == one[1] && userwo
 else if (type === "normal" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
         attempts = 6
         
+}else if (type == "normal" && attempts == maxattempts){
+    word.innerText = theChosenOne;
+    loss.style.display = "block";
 }
 
  squareid = 0
