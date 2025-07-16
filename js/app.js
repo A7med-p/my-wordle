@@ -63,6 +63,12 @@ let board3 = document.querySelector('.board3')
 let board4 = document.querySelector('.board4')
 let board5 = document.querySelector('.board5')
 let board6 = document.querySelector('.board6')
+let time1 = document.querySelector('.time1')
+let time2 = document.querySelector('.time2')
+let time3 = document.querySelector('.time3')
+let time4 = document.querySelector('.time4')
+let time5 = document.querySelector('.time5')
+let time6 = document.querySelector('.time6')
 let food1 = document.querySelector('.food1')
 let food2 = document.querySelector('.food2')
 let food3 = document.querySelector('.food3')
@@ -5372,7 +5378,7 @@ if (category == "time") {
 
 for ( var i = 0 ; i < 5; i++) {
 
-     square[count].style.backgroundColor = 'gray'
+     square1[count].style.backgroundColor = 'gray'
     for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = 'gray'
@@ -5383,7 +5389,7 @@ for ( var j = 0 ; j < 5; j++) {
 
     if (userword[i] == one[i]) {   
 
-        square[count].style.backgroundColor = "#2aa42a"
+        square1[count].style.backgroundColor = "#2aa42a"
         for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = "#2aa42a"
@@ -5392,7 +5398,7 @@ for ( var j = 0 ; j < 5; j++) {
 
     }else if (userword[i] == one[j]) {
 
-        square[count].style.backgroundColor = "#c9c946ff"
+        square1[count].style.backgroundColor = "#c9c946ff"
         for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = "#c9c946ff"
@@ -5589,7 +5595,7 @@ if(square[squareid] !== " " && squareid > 0 && category == "normal" ){
 
 if(square1[squareid] !== " " && squareid > 0 && category == "time" ){
         
-    square[squarepid-1].innerText = "";
+    square1[squarepid-1].innerText = "";
     userword.pop()
     squareid = squareid - 1;
     squarepid = squarepid - 1;
@@ -5597,7 +5603,7 @@ if(square1[squareid] !== " " && squareid > 0 && category == "time" ){
 
 if(square4[squareid] !== " " && squareid > 0 && category == "food"){
         
-    square[squarepid-1].innerText = "";
+    square4[squarepid-1].innerText = "";
     userword.pop()
     squareid = squareid - 1;
     squarepid = squarepid - 1;
@@ -5950,6 +5956,7 @@ tim.addEventListener('click',()=>{
 })
 
 function shake1(){
+time1.classList.add('shake')
 animal1.classList.add('shake')
 food1.classList.add('shake')
 anime1.classList.add('shake')
@@ -5957,6 +5964,7 @@ anime1.classList.add('shake')
 }
 
 function noshake1(){
+time1.classList.remove('shake')
 animal1.classList.remove('shake')
 food1.classList.remove('shake')
 anime1.classList.remove('shake')
@@ -5964,6 +5972,7 @@ anime1.classList.remove('shake')
 }
 
 function shake2(){
+time2.classList.add('shake')
 animal2.classList.add('shake')
 food2.classList.add('shake')
 anime2.classList.add('shake')
@@ -5971,6 +5980,7 @@ anime2.classList.add('shake')
 }
 
 function noshake2(){
+time2.classList.remove('shake')
 animal2.classList.remove('shake')
 food2.classList.remove('shake')
 anime2.classList.remove('shake')
@@ -5978,6 +5988,7 @@ anime2.classList.remove('shake')
 }
 
 function shake3(){
+time3.classList.add('shake')
 animal3.classList.add('shake')
 food3.classList.add('shake')
 anime3.classList.add('shake')
@@ -5985,6 +5996,7 @@ anime3.classList.add('shake')
 }
 
 function noshake3(){
+time3.classList.remove('shake')
 animal3.classList.remove('shake')
 food3.classList.remove('shake')
 anime3.classList.remove('shake')
@@ -5992,6 +6004,7 @@ anime3.classList.remove('shake')
 }
 
 function shake4(){
+time4.classList.add('shake')
 animal4.classList.add('shake')
 food4.classList.add('shake')
 anime4.classList.add('shake')
@@ -5999,6 +6012,7 @@ anime4.classList.add('shake')
 }
 
 function noshake4(){
+time4.classList.remove('shake')
 animal4.classList.remove('shake')
 food4.classList.remove('shake')
 anime4.classList.remove('shake')
@@ -6006,6 +6020,7 @@ anime4.classList.remove('shake')
 }
 
 function shake5(){
+time5.classList.add('shake')
 animal5.classList.add('shake')
 food5.classList.add('shake')
 anime5.classList.add('shake')
@@ -6013,6 +6028,7 @@ anime5.classList.add('shake')
 }
 
 function noshake5(){
+time5.classList.remove('shake')
 animal5.classList.remove('shake')
 food5.classList.remove('shake')
 anime5.classList.remove('shake')
@@ -6020,6 +6036,7 @@ anime5.classList.remove('shake')
 }
 
 function shake6(){
+time6.classList.add('shake')
 animal6.classList.add('shake')
 food6.classList.add('shake')
 anime6.classList.add('shake')
@@ -6027,6 +6044,7 @@ anime6.classList.add('shake')
 }
 
 function noshake6(){
+time6.classList.remove('shake')
 animal6.classList.remove('shake')
 food6.classList.remove('shake')
 anime6.classList.remove('shake')
