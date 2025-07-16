@@ -5706,6 +5706,7 @@ function reset() {
    console.log("anime: "+theChosenAnime);
    console.log("animal: "+theChosenAnimal);
    console.log("food: "+theChosenFood);
+   console.log("word: "+ theChosenOne);
    
    if (category == "normal") {
    for (let i = 0; i < 30; i++) {
@@ -5767,6 +5768,7 @@ function resetx() {
 console.log("anime: "+theChosenAnime);
 console.log("animal: "+theChosenAnimal);
 console.log("food: "+theChosenFood);
+console.log("word: "+ theChosenOne);
 
    if (category == "normal") {
    for (let i = 0; i < 30; i++) {
