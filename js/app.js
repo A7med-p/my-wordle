@@ -5810,7 +5810,7 @@ console.log("word: "+ theChosenOne);
    categor.style.display = "block";
    }
    
-   for (let i = 0; i < 27; i++) {
+   for (let i = 0; i < 83; i++) {
     letters[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
 
@@ -5824,6 +5824,7 @@ console.log("word: "+ theChosenOne);
     countmin = 2;
     execut = false
     if (category == "time") {
+    
     counter = 0; 
     }
     
@@ -6131,6 +6132,7 @@ tem.addEventListener('click',()=>{
     category = "time"
     main.style.display = "none";
     secGame.style.display = "block";
+    resetx();
 })
 
 return2.addEventListener('click',()=>{
