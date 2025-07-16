@@ -6141,7 +6141,6 @@ return2.addEventListener('click',()=>{
 })
 
 cate.addEventListener('click',()=>{
-    category = "time"
     main.style.display = "none";
     trdGame.style.display = "block";
 })
