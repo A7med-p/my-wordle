@@ -80,11 +80,6 @@ body{
   color: var(--text-color);
 }
 
-h2{
-  margin: 0px;
-  display: none;
-}
-
 header {
   display: flex;
   justify-content: space-around;
@@ -434,18 +429,6 @@ h3{
   margin: 0px;
 }
 
-.choice {
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  font-size: 20px;
-}
-
-.title {
-  font-size: 30px;
-  margin: 0px;
-}
-
 .norm{
   max-width: 120px;
   height: 50px;
@@ -743,10 +726,6 @@ a{
   color: black;
 }
 
-.fix{
-  margin-right: 10px;
-}
-
 .foods{
   display: none;
 }
@@ -948,5 +927,5 @@ a{
 }
 
 .tup {
-    visibility: hidden;
-  }
+  visibility: hidden;
+}

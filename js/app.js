@@ -112,7 +112,7 @@ let cate = document.querySelector('.cate')
 console.log("anime: "+theChosenAnime);
 console.log("animal: "+theChosenAnimal);
 console.log("food: "+theChosenFood);
-console.log("word: "+ theChosenOne)
+console.log("word: "+ theChosenOne);
 
 letters.forEach(letter => {
  letter.addEventListener('click', () => {
