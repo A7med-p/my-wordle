@@ -123,14 +123,14 @@ if(attempts < maxattempts){
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
-        if(category === "timer"){timer()}
+        if(category === "time"){timer()}
     }
     if (squareid <= 4 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "time") {
         square1[squarepid].innerText = letter.innerText;
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
-        if(category === "timer"){timer()}
+        if(category === "time"){timer()}
     }
     if (squareid <= 5 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "food") {
         square4[squarepid].innerText = letter.innerText;
@@ -2331,7 +2331,7 @@ if(attempts < maxattempts){
         userword.push(e)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
-        if(category === "timer"){timer()}
+        if(category === "time"){timer()}
 
     }
     if (squareid <= 4 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "time") {
@@ -2339,7 +2339,7 @@ if(attempts < maxattempts){
         userword.push(e)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
-        if(category === "timer"){timer()}
+        if(category === "time"){timer()}
 
     }
     if (squareid <= 5 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "food") {
@@ -5707,7 +5707,7 @@ function reset() {
    console.log("animal: "+theChosenAnimal);
    console.log("food: "+theChosenFood);
    console.log("word: "+ theChosenOne);
-   
+
    if (category == "normal") {
    for (let i = 0; i < 30; i++) {
     square[i].innerText = "";
@@ -5946,7 +5946,7 @@ tim.addEventListener('click',()=>{
     resetx()
     tim.style.visibility = "hidden"
     tup.style.visibility = "visible" ;
-    category = "timer"
+    category = "time"
 })
 
 function shake1(){
