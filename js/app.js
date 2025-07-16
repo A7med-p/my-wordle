@@ -16,29 +16,41 @@ let countsec = 60;
 let countmin = 2;
 let execut = false
 let counter = 0;
-let type = "normal";
 let info = false
 let category = "normal";
 let ls = 0;
 
 let letters = document.querySelectorAll('.sqrdown')
 let square = document.querySelectorAll('.sqrup')
+let square1 = document.querySelectorAll('.sqrup1')
 let square2 = document.querySelectorAll('.sqrup2')
 let square3 = document.querySelectorAll('.sqrup3')
+let square4 = document.querySelectorAll('.sqrup4')
 let enter = document.querySelector('.enter')
 let back = document.querySelector('.back')
 let keyboards = document.querySelectorAll('body')
 let root = document.documentElement;
 let resets = document.querySelector('.reset')
+let resets1 = document.querySelector('.resets1')
+let resets2 = document.querySelector('.resets2')
 let reset2 = document.querySelector('.reset2')
 let pop = document.querySelector('.popup')
-let popwin = document.querySelector('.popwin')
+let pop1 = document.querySelector('.popup1')
+let pop2 = document.querySelector('.popup2')
+let popwins = document.querySelector('.popwins')
 let help = document.querySelector('.help')
+let help1 = document.querySelector('.help1')
+let help2 = document.querySelector('.help2')
 let closeing = document.querySelector('.close-popup')
+let closeing1 = document.querySelector('.close-popup1')
+let closeing2 = document.querySelector('.close-popup2')
 let closings = document.querySelector('.close-sitting')
 let counts = document.querySelector('.counts')
 let countm = document.querySelector('.countm')
 let sitting = document.querySelector('.sitting')
+let sitting1 = document.querySelector('.sitting1')
+let sitting2 = document.querySelector('.sitting2')
+let sitting3 = document.querySelector('.sitting3')
 let sittings = document.querySelector('.sittings')
 let nstyle = document.querySelector('.normal-style')
 let bstyle = document.querySelector('.blue-style')
@@ -86,10 +98,21 @@ let categorysc = document.querySelector('.categorys-c')
 let corr = document.querySelector('.corr')
 let lcount = document.querySelector('.l-count')
 let word = document.querySelector('.word')
+let norm = document.querySelector('.norm')
+let firstGame =  document.querySelector('.first-game')
+let return1 = document.querySelector('.return1')
+let main = document.querySelector('.main')
+let secGame =  document.querySelector('.sec-game')
+let return2 = document.querySelector('.return2')
+let tem = document.querySelector('.tem')
+let trdGame =  document.querySelector('.trd-game')
+let return3 = document.querySelector('.return3')
+let cate = document.querySelector('.cate')
 
 console.log("anime: "+theChosenAnime);
 console.log("animal: "+theChosenAnimal);
 console.log("food: "+theChosenFood);
+console.log("word: "+ theChosenOne)
 
 letters.forEach(letter => {
  letter.addEventListener('click', () => {
@@ -100,10 +123,17 @@ if(attempts < maxattempts){
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
-        if(type === "timer"){timer()}
+        if(category === "timer"){timer()}
+    }
+    if (squareid <= 4 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "time") {
+        square1[squarepid].innerText = letter.innerText;
+        userword.push(letter.innerText)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+        if(category === "timer"){timer()}
     }
     if (squareid <= 5 && letter.innerText !== 'enter' && letter.innerText !== 'back' && category == "food") {
-        square[squarepid].innerText = letter.innerText;
+        square4[squarepid].innerText = letter.innerText;
         userword.push(letter.innerText)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
@@ -122,6 +152,949 @@ if(attempts < maxattempts){
     }
 
 if( letter.innerText == 'enter' && squareid == 5 && category == "normal"){
+  switch (userword[0]) {
+    case "A":
+        for (let i = 0; i < words[0].A.length; i++) {
+            if (words[0].A[i] == userword.join('')) {
+            enters()
+            info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "B":
+        for (let i = 0; i < words[1].B.length; i++) {
+            if (words[1].B[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "C":
+        for (let i = 0; i < words[2].C.length; i++) {
+            if (words[2].C[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "D":
+        for (let i = 0; i < words[3].D.length; i++) {
+            if (words[3].D[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "E":
+        for (let i = 0; i < words[4].E.length; i++) {
+            if (words[4].E[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "F":
+        for (let i = 0; i < words[5].F.length; i++) {
+            if (words[5].F[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "G":
+        for (let i = 0; i < words[6].G.length; i++) {
+            if (words[6].G[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "H":
+        for (let i = 0; i < words[7].H.length; i++) {
+            if (words[7].H[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "I":
+        for (let i = 0; i < words[8].I.length; i++) {
+            if (words[8].I[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "J":
+        for (let i = 0; i < words[9].J.length; i++) {
+            if (words[9].J[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "K":
+        for (let i = 0; i < words[10].K.length; i++) {
+            if (words[10].K[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "L":
+        for (let i = 0; i < words[11].L.length; i++) {
+            if (words[11].L[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "M":
+        for (let i = 0; i < words[12].M.length; i++) {
+            if (words[12].M[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "N":
+        for (let i = 0; i < words[13].N.length; i++) {
+            if (words[13].N[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "O":
+        for (let i = 0; i < words[14].O.length; i++) {
+            if (words[14].O[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "P":
+        for (let i = 0; i < words[15].P.length; i++) {
+            if (words[15].P[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Q":
+        for (let i = 0; i < words[16].Q.length; i++) {
+            if (words[16].Q[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "R":
+        for (let i = 0; i < words[17].R.length; i++) {
+            if (words[17].R[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "S":
+        for (let i = 0; i < words[18].S.length; i++) {
+            if (words[18].S[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "T":
+        for (let i = 0; i < words[19].T.length; i++) {
+            if (words[19].T[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "U":
+        for (let i = 0; i < words[20].U.length; i++) {
+            if (words[20].U[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "V":
+        for (let i = 0; i < words[21].V.length; i++) {
+            if (words[21].V[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "W":
+        for (let i = 0; i < words[22].W.length; i++) {
+            if (words[22].W[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "X":
+        for (let i = 0; i < words[23].X.length; i++) {
+            if (words[23].X[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Y":
+        for (let i = 0; i < words[24].Y.length; i++) {
+            if (words[24].Y[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Z":
+        for (let i = 0; i < words[25].Z.length; i++) {
+            if (words[25].Z[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+
+    default:
+             break;
+        }
+}
+if( letter.innerText == 'enter' && squareid == 5 && category == "time"){
   switch (userword[0]) {
     case "A":
         for (let i = 0; i < words[0].A.length; i++) {
@@ -1358,11 +2331,19 @@ if(attempts < maxattempts){
         userword.push(e)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
-        if(type === "timer"){timer()}
+        if(category === "timer"){timer()}
+
+    }
+    if (squareid <= 4 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "time") {
+        square1[squarepid].innerText = e;
+        userword.push(e)
+        squareid = squareid + 1;
+        squarepid = squarepid + 1;
+        if(category === "timer"){timer()}
 
     }
     if (squareid <= 5 && e !== 'Enter' && e !== 'Backspace' && e !== ' ' && category == "food") {
-        square[squarepid].innerText = e;
+        square4[squarepid].innerText = e;
         userword.push(e)
         squareid = squareid + 1;
         squarepid = squarepid + 1;
@@ -1381,6 +2362,1896 @@ if(attempts < maxattempts){
     }
     
 
+if( e == 'Enter'&& squareid == 5 && category == "normal"){
+        switch (userword[0]) {
+    case "A":
+        for (let i = 0; i < words[0].A.length; i++) {
+            if (words[0].A[i] == userword.join('')) {
+            enters()
+            info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+             break;
+             }
+            
+            info = false
+             break;
+    case "B":
+        for (let i = 0; i < words[1].B.length; i++) {
+            if (words[1].B[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "C":
+        for (let i = 0; i < words[2].C.length; i++) {
+            if (words[2].C[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "D":
+        for (let i = 0; i < words[3].D.length; i++) {
+            if (words[3].D[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "E":
+        for (let i = 0; i < words[4].E.length; i++) {
+            if (words[4].E[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "F":
+        for (let i = 0; i < words[5].F.length; i++) {
+            if (words[5].F[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "G":
+        for (let i = 0; i < words[6].G.length; i++) {
+            if (words[6].G[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "H":
+        for (let i = 0; i < words[7].H.length; i++) {
+            if (words[7].H[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "I":
+        for (let i = 0; i < words[8].I.length; i++) {
+            if (words[8].I[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "J":
+        for (let i = 0; i < words[9].J.length; i++) {
+            if (words[9].J[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "K":
+        for (let i = 0; i < words[10].K.length; i++) {
+            if (words[10].K[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "L":
+        for (let i = 0; i < words[11].L.length; i++) {
+            if (words[11].L[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "M":
+        for (let i = 0; i < words[12].M.length; i++) {
+            if (words[12].M[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "N":
+        for (let i = 0; i < words[13].N.length; i++) {
+            if (words[13].N[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "O":
+        for (let i = 0; i < words[14].O.length; i++) {
+            if (words[14].O[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "P":
+        for (let i = 0; i < words[15].P.length; i++) {
+            if (words[15].P[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Q":
+        for (let i = 0; i < words[16].Q.length; i++) {
+            if (words[16].Q[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "R":
+        for (let i = 0; i < words[17].R.length; i++) {
+            if (words[17].R[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "S":
+        for (let i = 0; i < words[18].S.length; i++) {
+            if (words[18].S[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "T":
+        for (let i = 0; i < words[19].T.length; i++) {
+            if (words[19].T[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "U":
+        for (let i = 0; i < words[20].U.length; i++) {
+            if (words[20].U[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "V":
+        for (let i = 0; i < words[21].V.length; i++) {
+            if (words[21].V[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "W":
+        for (let i = 0; i < words[22].W.length; i++) {
+            if (words[22].W[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "X":
+        for (let i = 0; i < words[23].X.length; i++) {
+            if (words[23].X[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Y":
+        for (let i = 0; i < words[24].Y.length; i++) {
+            if (words[24].Y[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Z":
+        for (let i = 0; i < words[25].Z.length; i++) {
+            if (words[25].Z[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+
+    default:
+             break;
+        }
+    }
+if( e == 'Enter'&& squareid == 5 && category == "time"){
+        switch (userword[0]) {
+    case "A":
+        for (let i = 0; i < words[0].A.length; i++) {
+            if (words[0].A[i] == userword.join('')) {
+            enters()
+            info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+             break;
+             }
+            
+            info = false
+             break;
+    case "B":
+        for (let i = 0; i < words[1].B.length; i++) {
+            if (words[1].B[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "C":
+        for (let i = 0; i < words[2].C.length; i++) {
+            if (words[2].C[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "D":
+        for (let i = 0; i < words[3].D.length; i++) {
+            if (words[3].D[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "E":
+        for (let i = 0; i < words[4].E.length; i++) {
+            if (words[4].E[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "F":
+        for (let i = 0; i < words[5].F.length; i++) {
+            if (words[5].F[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "G":
+        for (let i = 0; i < words[6].G.length; i++) {
+            if (words[6].G[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "H":
+        for (let i = 0; i < words[7].H.length; i++) {
+            if (words[7].H[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "I":
+        for (let i = 0; i < words[8].I.length; i++) {
+            if (words[8].I[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "J":
+        for (let i = 0; i < words[9].J.length; i++) {
+            if (words[9].J[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "K":
+        for (let i = 0; i < words[10].K.length; i++) {
+            if (words[10].K[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "L":
+        for (let i = 0; i < words[11].L.length; i++) {
+            if (words[11].L[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "M":
+        for (let i = 0; i < words[12].M.length; i++) {
+            if (words[12].M[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "N":
+        for (let i = 0; i < words[13].N.length; i++) {
+            if (words[13].N[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "O":
+        for (let i = 0; i < words[14].O.length; i++) {
+            if (words[14].O[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "P":
+        for (let i = 0; i < words[15].P.length; i++) {
+            if (words[15].P[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Q":
+        for (let i = 0; i < words[16].Q.length; i++) {
+            if (words[16].Q[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "R":
+        for (let i = 0; i < words[17].R.length; i++) {
+            if (words[17].R[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "S":
+        for (let i = 0; i < words[18].S.length; i++) {
+            if (words[18].S[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "T":
+        for (let i = 0; i < words[19].T.length; i++) {
+            if (words[19].T[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "U":
+        for (let i = 0; i < words[20].U.length; i++) {
+            if (words[20].U[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "V":
+        for (let i = 0; i < words[21].V.length; i++) {
+            if (words[21].V[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "W":
+        for (let i = 0; i < words[22].W.length; i++) {
+            if (words[22].W[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "X":
+        for (let i = 0; i < words[23].X.length; i++) {
+            if (words[23].X[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Y":
+        for (let i = 0; i < words[24].Y.length; i++) {
+            if (words[24].Y[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+    case "Z":
+        for (let i = 0; i < words[25].Z.length; i++) {
+            if (words[25].Z[i] == userword.join('')) {
+            enters()
+             info = true
+            break;
+            }
+}
+            if(info == false){
+             info = true
+             switch (attempts) {
+                case 0:
+                    shake1()
+                    break;
+                case 1:
+                    shake2()
+                    break;
+                case 2:
+                    shake3()
+                    break;
+                case 3:
+                    shake4()
+                    break;
+                case 4:
+                    shake5()
+                    break;
+                case 5:
+                    shake6()
+                    break;
+             
+                default:
+                    break;
+             }
+            }
+            info = false
+             break;
+
+    default:
+             break;
+        }
+    }
 if( e == 'Enter'&& squareid == 5 && category == "normal"){
         switch (userword[0]) {
     case "A":
@@ -2445,7 +5316,7 @@ if( e == 'Enter'&& squareid == 6 && category == "anime"){
 })
 
 function enters() {
-    console.log(userword);
+   
 if (category == "normal") {
     
 
@@ -2482,7 +5353,57 @@ for ( var j = 0 ; j < 5; j++) {
 count++
 }
 attempts++
-if (type === "timer" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
+if (userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
+        attempts = 6
+        
+}else if (attempts == maxattempts){
+    word.innerText = theChosenOne;
+    loss.style.display = "block";
+}
+
+ squareid = 0
+for (let i = 0; i < 5; i++) {
+        userword.pop()  
+}
+}
+
+if (category == "time") {
+    
+
+for ( var i = 0 ; i < 5; i++) {
+
+     square[count].style.backgroundColor = 'gray'
+    for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = 'gray'
+            }
+    }
+
+for ( var j = 0 ; j < 5; j++) {
+
+    if (userword[i] == one[i]) {   
+
+        square[count].style.backgroundColor = "#2aa42a"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#2aa42a"
+            }
+        }
+
+    }else if (userword[i] == one[j]) {
+
+        square[count].style.backgroundColor = "#c9c946ff"
+        for (let k = 0; k < letters.length; k++) {
+            if (letters[k].id.toUpperCase() == userword[i]) {
+                letters[k].style.backgroundColor = "#c9c946ff"
+            }
+        }
+    }
+}
+count++
+}
+attempts++
+if (userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
         counter++
         countsec = countsec+30
         if (countsec>=61) {
@@ -2492,13 +5413,6 @@ if (type === "timer" && userword[0] == one[0] && userword[1] == one[1] && userwo
         
         document.getElementById("corr").innerText = counter 
         reset()
-}
-else if (type === "normal" && userword[0] == one[0] && userword[1] == one[1] && userword[2] == one[2] && userword[3] == one[3] && userword[4] == one[4]) {
-        attempts = 6
-        
-}else if (type == "normal" && attempts == maxattempts){
-    word.innerText = theChosenOne;
-    loss.style.display = "block";
 }
 
  squareid = 0
@@ -2511,7 +5425,7 @@ if (category == "food") {
     
 for ( var i = 0 ; i < 6; i++) {
 
-     square[count].style.backgroundColor = 'gray'
+     square4[count].style.backgroundColor = 'gray'
     for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = 'gray'
@@ -2522,7 +5436,7 @@ for ( var j = 0 ; j < 6; j++) {
 
     if (userword[i] == two[i]) {   
 
-        square[count].style.backgroundColor = "#2aa42a"
+        square4[count].style.backgroundColor = "#2aa42a"
         for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = "#2aa42a"
@@ -2531,7 +5445,7 @@ for ( var j = 0 ; j < 6; j++) {
 
     }else if (userword[i] == two[j]) {
 
-        square[count].style.backgroundColor = "#c9c946ff"
+        square4[count].style.backgroundColor = "#c9c946ff"
         for (let k = 0; k < letters.length; k++) {
             if (letters[k].id.toUpperCase() == userword[i]) {
                 letters[k].style.backgroundColor = "#c9c946ff"
@@ -2673,7 +5587,15 @@ if(square[squareid] !== " " && squareid > 0 && category == "normal" ){
     squarepid = squarepid - 1;
 }
 
-if(square[squareid] !== " " && squareid > 0 && category == "food"){
+if(square1[squareid] !== " " && squareid > 0 && category == "time" ){
+        
+    square[squarepid-1].innerText = "";
+    userword.pop()
+    squareid = squareid - 1;
+    squarepid = squarepid - 1;
+}
+
+if(square4[squareid] !== " " && squareid > 0 && category == "food"){
         
     square[squarepid-1].innerText = "";
     userword.pop()
@@ -2785,17 +5707,22 @@ function reset() {
    console.log("animal: "+theChosenAnimal);
    console.log("food: "+theChosenFood);
    
-if (category == "normal") {
+   if (category == "normal") {
    for (let i = 0; i < 30; i++) {
     square[i].innerText = "";
     square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
-}
-   
+   }
+   if (category == "time") {
+   for (let i = 0; i < 30; i++) {
+    square1[i].innerText = "";
+    square1[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   }
    if (category == "food") {
     for (let i = 0; i < 36; i++) {
-    square[i].innerText = "";
-    square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+    square4[i].innerText = "";
+    square4[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
    
    }
@@ -2814,7 +5741,7 @@ if (category == "normal") {
    
    }
    
-   for (let i = 0; i < 27; i++) {
+   for (let i = 0; i < 83; i++) {
     letters[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
 
@@ -2847,10 +5774,16 @@ console.log("food: "+theChosenFood);
     square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
    }
+   if (category == "time") {
+   for (let i = 0; i < 30; i++) {
+    square1[i].innerText = "";
+    square1[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+   }
+   }
    if (category == "food") {
     for (let i = 0; i < 36; i++) {
-    square[i].innerText = "";
-    square[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
+    square4[i].innerText = "";
+    square4[i].style.backgroundColor = root.style.getPropertyValue('--main-color')
    }
    categor.style.display = "block";
    }
@@ -2882,7 +5815,7 @@ console.log("food: "+theChosenFood);
     countsec = 60;
     countmin = 2;
     execut = false
-    if (type == "time") {
+    if (category == "time") {
     counter = 0; 
     }
     
@@ -2894,13 +5827,36 @@ resets.addEventListener('click', ()=>{
     resetx()
 })
 
+resets1.addEventListener('click', ()=>{
+    resetx()
+})
+
+resets2.addEventListener('click', ()=>{
+    resetx()
+})
+
 help.addEventListener('click', ()=>{
     pop.style.display = "block";
 })
+
+help1.addEventListener('click', ()=>{
+    pop1.style.display = "block";
+})
+
+help2.addEventListener('click', ()=>{
+    pop2.style.display = "block";
+})
     
 closeing.addEventListener('click',()=>{
-    pop.style.display = "none";
-    
+    pop.style.display = "none"; 
+})
+
+closeing1.addEventListener('click',()=>{
+    pop1.style.display = "none"; 
+})
+
+closeing2.addEventListener('click',()=>{
+    pop2.style.display = "none"; 
 })
 
 function timer (){
@@ -2916,7 +5872,7 @@ if(execut == false){
         countsec = countsec + 60
         countmin--;
     }else if(countsec == 0 && countmin == 0){
-        popwin.style.display = "block";
+        popwins.style.display = "block";
     }else if(countsec < 0){
         countsec = 0
     }
@@ -2928,10 +5884,22 @@ if(execut == false){
 
 reset2.addEventListener('click',()=>{
     resetx()
-    popwin.style.display = "none";
+    popwins.style.display = "none";
 })
 
 sitting.addEventListener('click',()=>{
+    sittings.style.display = "block";
+})
+
+sitting1.addEventListener('click',()=>{
+    sittings.style.display = "block";
+})
+
+sitting2.addEventListener('click',()=>{
+    sittings.style.display = "block";
+})
+
+sitting3.addEventListener('click',()=>{
     sittings.style.display = "block";
 })
 
@@ -2976,7 +5944,7 @@ tim.addEventListener('click',()=>{
     resetx()
     tim.style.visibility = "hidden"
     tup.style.visibility = "visible" ;
-    type = "timer"
+    category = "timer"
 })
 
 function shake1(){
@@ -3126,4 +6094,37 @@ animet.addEventListener('click',()=>{
     categorysc.style.display = "none";
     cat.innerText = "anime"
     reset()
+})
+
+norm.addEventListener('click',()=>{
+    category = "normal"
+    main.style.display = "none";
+    firstGame.style.display = "block";
+})
+
+return1.addEventListener('click',()=>{
+    main.style.display = "block";
+    firstGame.style.display = "none";
+})
+
+tem.addEventListener('click',()=>{
+    category = "time"
+    main.style.display = "none";
+    secGame.style.display = "block";
+})
+
+return2.addEventListener('click',()=>{
+    main.style.display = "block";
+    secGame.style.display = "none";
+})
+
+cate.addEventListener('click',()=>{
+    category = "time"
+    main.style.display = "none";
+    trdGame.style.display = "block";
+})
+
+return3.addEventListener('click',()=>{
+    main.style.display = "block";
+    trdGame.style.display = "none";
 })

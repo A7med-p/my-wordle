@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./data.js"></script>
-    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js"></script>
+    <script defer src="./js/app.js"></script>
     <title>My game!!</title>
 </head>
 
 <body>
-  
-<header>
-<span class="spa"><button class="return"><a href="index3.html">←</a></button><button class="help">?</button></span>
-  <h2>My Wordle</h2>
-  <span class="spa"><button class="reset">⟳</button><button class="sitting">⚙</button></span>
-</header>
 
-<div class="sittings">
-   <div class="sitting-content">
-     <div class="popup-header">
-      <button class="close-sitting">X</button>
-      
-     </div>
-     <div class="popup-body">
-        <h1>change style:</h1>
-     </div>
-     <div class="sitting-buttons">
-     <span class="spa"><button class="normal-style">X</button><button class="blue-style">X</button><button class="night-style">X</button></span>
-     
-     </div>
-     </div>
-</div>
+<section class="main">
+<section>
+    <div class="title">
+      <h1>Wordle</h1>
+    </div>
+    <div class="choice">
+    <h4>Welcome to the wordle game</h4>
+    <h4>Click on the button below to chose the mod</h4>
+    <button class="norm">normal</button>
+    <button class="tem">timer</button>
+    <button class="cate">categorys</button>
+    </div>
+</section>
+<button class="sitting">⚙</button>
+
+
+</section>
+
+<section class="first-game">
+<header>
+<span class="spa"><button class="return1">←</button><button class="help">?</button></span>
+  <h2>My Wordle</h2>
+  <span class="spa"><button class="reset">⟳</button><button class="sitting1">⚙</button></span>
+</header>
 
 <div class="popup">
    <div class="popup-content">
@@ -46,19 +49,6 @@
         <div class="line1"><div class="sqrgreen">X</div><p>Green means the letter is in the correct position.</p></div>
         <div class="line2"><div class="sqryellow">X</div><p>Yellow means the letter is in the word but in the wrong position.</p></div>
         <div class="line3"><div class="sqrgray">X</div><p>Gray means the letter is not in the word at all.</p></div>
-     </div>
-     </div>
-</div>
-
-<div class="popwin">
-   <div class="popup-content">
-     <div class="popup-header">
-      <button class="reset2">⟳</button>
-     </div>
-     <div class="popup-body">
-        <h1>you got</h1>
-        <h1 id="corr">0</h1>
-        <h1>correct</h1>
      </div>
      </div>
 </div>
@@ -159,28 +149,22 @@
   <button class="sqrdown" id="m">M</button>
   <button class="back sqrdown" id="backspace">back</button>
 </section>
+</section>
 
-<section class="blanks" style="display: none;">
-<div class="sittings">
-   <div class="sitting-content">
-     <div class="popup-header">
-      <button class="close-sitting">X</button>
-      
-     </div>
-     <div class="popup-body">
-        <h1>change style:</h1>
-     </div>
-     <div class="sitting-buttons">
-     <span class="spa"><button class="normal-style">X</button><button class="blue-style">X</button><button class="night-style">X</button></span>
-     
-     </div>
-     </div>
-</div>
+<section class="sec-game">
+  
+<header>
+  <span class="spa"><button class="return2">←</button><button class="help1">?</button></span>
+  <div class="timer"><span class="ttime"><button class="tim">start</button><span class="countm"><h3>3</h3></span><span><h3>:</h3></span><span class="counts"><h3>00</h3></span></span></div>
+  <span class="spa"><button class="resets1">⟳</button><button class="sitting2">⚙</button></span>
+</header>
 
-<div class="popup">
+
+
+<div class="popup1">
    <div class="popup-content">
      <div class="popup-header">
-      <button class="close-popup">X</button>
+      <button class="close-popup1">X</button>
      </div>
      <div class="popup-body">
         <h1>How to play:</h1>
@@ -190,11 +174,12 @@
         <div class="line1"><div class="sqrgreen">X</div><p>Green means the letter is in the correct position.</p></div>
         <div class="line2"><div class="sqryellow">X</div><p>Yellow means the letter is in the word but in the wrong position.</p></div>
         <div class="line3"><div class="sqrgray">X</div><p>Gray means the letter is not in the word at all.</p></div>
+        <p>After you hit start, the board well show, the moment u press a letter the timer well start</p>
      </div>
      </div>
 </div>
 
-<div class="popwin">
+<div class="popwins">
    <div class="popup-content">
      <div class="popup-header">
       <button class="reset2">⟳</button>
@@ -203,6 +188,120 @@
         <h1>you got</h1>
         <h1 id="corr">0</h1>
         <h1>correct</h1>
+     </div>
+     </div>
+</div>
+
+<section class="tup">
+<section class="board1">
+    <div class="sqrup1" id="0"></div>
+    <div class="sqrup1" id="1"></div>
+    <div class="sqrup1" id="2"></div>
+    <div class="sqrup1" id="3"></div>
+    <div class="sqrup1" id="4"></div>
+</section>
+
+<section class="board2">
+    <div class="sqrup1" id="5"></div>
+    <div class="sqrup1" id="6"></div>
+    <div class="sqrup1" id="7"></div>
+    <div class="sqrup1" id="8"></div>
+    <div class="sqrup1" id="9"></div>
+</section>
+
+<section class="board3">
+    <div class="sqrup1" id="10"></div>
+    <div class="sqrup1" id="11"></div>
+    <div class="sqrup1" id="12"></div>
+    <div class="sqrup1" id="13"></div>
+    <div class="sqrup1" id="14"></div>
+</section>
+
+<section class="board4">
+    <div class="sqrup1" id="15"></div>
+    <div class="sqrup1" id="16"></div>
+    <div class="sqrup1" id="17"></div>
+    <div class="sqrup1" id="18"></div>
+    <div class="sqrup1" id="19"></div>
+</section>
+
+<section class="board5">
+    <div class="sqrup1" id="20"></div>
+    <div class="sqrup1" id="21"></div>
+    <div class="sqrup1" id="22"></div>
+    <div class="sqrup1" id="23"></div>
+    <div class="sqrup1" id="24"></div>
+</section>
+
+<section class="board6">
+    <div class="sqrup1" id="25"></div>
+    <div class="sqrup1" id="26"></div>
+    <div class="sqrup1" id="27"></div>
+    <div class="sqrup1" id="28"></div>
+    <div class="sqrup1" id="29"></div>
+</section>
+</section>
+ 
+<section class="letters1">
+  <button class="sqrdown" id="q">Q</button>
+  <button class="sqrdown" id="w">W</button>
+  <button class="sqrdown" id="e">E</button>
+  <button class="sqrdown" id="r">R</button>
+  <button class="sqrdown" id="t">T</button>
+  <button class="sqrdown" id="y">Y</button>
+  <button class="sqrdown" id="u">U</button>
+  <button class="sqrdown" id="i">I</button>
+  <button class="sqrdown" id="o">O</button>
+  <button class="sqrdown" id="p">P</button>
+</section>
+
+<section class="letters2">
+  <button class="sqrdown" id="a">A</button>
+  <button class="sqrdown" id="s">S</button>
+  <button class="sqrdown" id="d">D</button>
+  <button class="sqrdown" id="f">F</button>
+  <button class="sqrdown" id="g">G</button>
+  <button class="sqrdown" id="h">H</button>
+  <button class="sqrdown" id="j">J</button>
+  <button class="sqrdown" id="k">K</button>
+  <button class="sqrdown" id="l">L</button>
+</section>
+
+<section class="letters3">
+  <button class="enter sqrdown" id="enter">enter</button>
+  <button class="sqrdown" id="z">Z</button>
+  <button class="sqrdown" id="x">X</button>
+  <button class="sqrdown" id="c">C</button>
+  <button class="sqrdown" id="v">V</button>
+  <button class="sqrdown" id="b">B</button>
+  <button class="sqrdown" id="n">N</button>
+  <button class="sqrdown" id="m">M</button>
+  <button class="back sqrdown" id="backspace">back</button>
+</section>
+
+</section>
+
+<section class="trd-game">
+
+<header>
+<span class="spa"><button class="return3">←</button><button class="help2">?</button></span>
+<h2 class="cat"style="display: block;">  </h2>
+<span class="spa"><button class="resets2">⟳</button><button class="sitting3">⚙</button></span>
+</header>
+
+<div class="popup2">
+   <div class="popup-content">
+     <div class="popup-header">
+      <button class="close-popup2">X</button>
+     </div>
+     <div class="popup-body">
+        <h1>How to play:</h1>
+        <p>Guess the word in 6 tries.</p>
+        <p>Each guess must be a valid 5-letter word.</p>
+        <p>After each guess, the color of the tiles will change to show how close your guess was to the word.</p>
+        <div class="line1"><div class="sqrgreen">X</div><p>Green means the letter is in the correct position.</p></div>
+        <div class="line2"><div class="sqryellow">X</div><p>Yellow means the letter is in the word but in the wrong position.</p></div>
+        <div class="line3"><div class="sqrgray">X</div><p>Gray means the letter is not in the word at all.</p></div>
      </div>
      </div>
 </div>
@@ -254,57 +353,57 @@
 
 <section class="foods">
 <section class="food1">
-    <div class="sqrup" id="0"></div>
-    <div class="sqrup" id="1"></div>
-    <div class="sqrup" id="2"></div>
-    <div class="sqrup" id="3"></div>
-    <div class="sqrup" id="4"></div>
-    <div class="sqrup" id="5"></div>
+    <div class="sqrup4" id="0"></div>
+    <div class="sqrup4" id="1"></div>
+    <div class="sqrup4" id="2"></div>
+    <div class="sqrup4" id="3"></div>
+    <div class="sqrup4" id="4"></div>
+    <div class="sqrup4" id="5"></div>
 </section>
 
 <section class="food2">
-    <div class="sqrup" id="6"></div>
-    <div class="sqrup" id="7"></div>
-    <div class="sqrup" id="8"></div>
-    <div class="sqrup" id="9"></div>
-    <div class="sqrup" id="10"></div>
-    <div class="sqrup" id="11"></div>
+    <div class="sqrup4" id="6"></div>
+    <div class="sqrup4" id="7"></div>
+    <div class="sqrup4" id="8"></div>
+    <div class="sqrup4" id="9"></div>
+    <div class="sqrup4" id="10"></div>
+    <div class="sqrup4" id="11"></div>
 </section>
 
 <section class="food3">
-    <div class="sqrup" id="12"></div>
-    <div class="sqrup" id="13"></div>
-    <div class="sqrup" id="14"></div>
-    <div class="sqrup" id="15"></div>
-    <div class="sqrup" id="16"></div>
-    <div class="sqrup" id="17"></div>
+    <div class="sqrup4" id="12"></div>
+    <div class="sqrup4" id="13"></div>
+    <div class="sqrup4" id="14"></div>
+    <div class="sqrup4" id="15"></div>
+    <div class="sqrup4" id="16"></div>
+    <div class="sqrup4" id="17"></div>
 </section>
 
 <section class="food4">
-    <div class="sqrup" id="18"></div>
-    <div class="sqrup" id="19"></div>
-    <div class="sqrup" id="20"></div>
-    <div class="sqrup" id="21"></div>
-    <div class="sqrup" id="22"></div>
-    <div class="sqrup" id="23"></div>
+    <div class="sqrup4" id="18"></div>
+    <div class="sqrup4" id="19"></div>
+    <div class="sqrup4" id="20"></div>
+    <div class="sqrup4" id="21"></div>
+    <div class="sqrup4" id="22"></div>
+    <div class="sqrup4" id="23"></div>
 </section>
 
 <section class="food5">
-    <div class="sqrup" id="24"></div>
-    <div class="sqrup" id="25"></div>
-    <div class="sqrup" id="26"></div>
-    <div class="sqrup" id="27"></div>
-    <div class="sqrup" id="28"></div>
-    <div class="sqrup" id="29"></div>
+    <div class="sqrup4" id="24"></div>
+    <div class="sqrup4" id="25"></div>
+    <div class="sqrup4" id="26"></div>
+    <div class="sqrup4" id="27"></div>
+    <div class="sqrup4" id="28"></div>
+    <div class="sqrup4" id="29"></div>
 </section>
 
 <section class="food6">
-    <div class="sqrup" id="30"></div>
-    <div class="sqrup" id="31"></div>
-    <div class="sqrup" id="32"></div>
-    <div class="sqrup" id="33"></div>
-    <div class="sqrup" id="34"></div>
-    <div class="sqrup" id="35"></div>
+    <div class="sqrup4" id="30"></div>
+    <div class="sqrup4" id="31"></div>
+    <div class="sqrup4" id="32"></div>
+    <div class="sqrup4" id="33"></div>
+    <div class="sqrup4" id="34"></div>
+    <div class="sqrup4" id="35"></div>
 </section>
 </section>
 
@@ -402,7 +501,62 @@
     <div class="sqrup2" id="23"></div>
 </section>
 </section>
+
+<section class="letters1">
+  <button class="sqrdown" id="q">Q</button>
+  <button class="sqrdown" id="w">W</button>
+  <button class="sqrdown" id="e">E</button>
+  <button class="sqrdown" id="r">R</button>
+  <button class="sqrdown" id="t">T</button>
+  <button class="sqrdown" id="y">Y</button>
+  <button class="sqrdown" id="u">U</button>
+  <button class="sqrdown" id="i">I</button>
+  <button class="sqrdown" id="o">O</button>
+  <button class="sqrdown" id="p">P</button>
 </section>
-<button class="tim" style="display: none;"><a href="index2.html">timer</a></button>
+
+<section class="letters2">
+  <button class="sqrdown" id="a">A</button>
+  <button class="sqrdown" id="s">S</button>
+  <button class="sqrdown" id="d">D</button>
+  <button class="sqrdown" id="f">F</button>
+  <button class="sqrdown" id="g">G</button>
+  <button class="sqrdown" id="h">H</button>
+  <button class="sqrdown" id="j">J</button>
+  <button class="sqrdown" id="k">K</button>
+  <button class="sqrdown" id="l">L</button>
+</section>
+
+<section class="letters3">
+  <button class="enter sqrdown" id="enter">enter</button>
+  <button class="sqrdown" id="z">Z</button>
+  <button class="sqrdown" id="x">X</button>
+  <button class="sqrdown" id="c">C</button>
+  <button class="sqrdown" id="v">V</button>
+  <button class="sqrdown" id="b">B</button>
+  <button class="sqrdown" id="n">N</button>
+  <button class="sqrdown" id="m">M</button>
+  <button class="back sqrdown" id="backspace">back</button>
+</section>
+
+</section>
+
+<div class="sittings">
+   <div class="sitting-content">
+     <div class="popup-header">
+      <button class="close-sitting">X</button>
+      
+     </div>
+     <div class="popup-body">
+        <h1>change style:</h1>
+     </div>
+     <div class="sitting-buttons">
+     <span class="spa"><button class="normal-style">X</button><button class="blue-style">X</button><button class="night-style">X</button></span>
+     
+     </div>
+     </div>
+</div>
+
 </body>
+
 </html>
