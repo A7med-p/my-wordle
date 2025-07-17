@@ -5610,7 +5610,7 @@ if(square4[squareid] !== " " && squareid > 0 && category == "food"){
 }
 
 if(square2[squareid] !== " " && squareid > 0 && category == "animal"){
-    console.log(squarepid);
+    
         
     square2[squarepid-1].innerText = "";
     userword.pop()
@@ -5619,7 +5619,7 @@ if(square2[squareid] !== " " && squareid > 0 && category == "animal"){
 }
 
 if(square3[squareid] !== " " && squareid > 0 && category == "anime"){
-    console.log(squarepid);
+    
         
     square3[squarepid-1].innerText = "";
     userword.pop()
